@@ -1,0 +1,39 @@
+폴더 트리 정리
+
+1. index 파일 
+
+
+2. css
+
+2-1. module : css 파일 모아 놓은 곳 
+** css 파일 이용을 할 가능성이 있으니 만들어둠
+2-1-1. font.css : font file
+2-1-2. color.css : color file
+2-1-3. layout.css : layout 기본 file
+2-1-4. mobile.css : mobile version
+2-1-5. tablet.css : tablet version
+2-1-6. desktop.css : desktop version
+2-1-7. class_mixin.css : display, class, mixin 등
+
+2-2. style.css : 모든 css 파일을 모아 놓은 통합 css파일
+
+
+3. javascript
+
+3-1. module : js file 모음
+3-1-1. header.js
+3-1-2. main.js
+3-1-3. footer.js
+3-1-4. funtion.js
+
+3-2. style.js : 모든 js module 모음
+
+
+4. image
+4-1. project-01
+4-2. project-02
+4-3. project-03
+
+
+** branch에 대한 설명 (알아보기 쉽다.)
+https://backlog.com/git-tutorial/kr/stepup/stepup2_2.html
