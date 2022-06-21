@@ -2,6 +2,8 @@
 const pageArr = [1,2,3,4,5,6];
 const pageData = ["One", "Two", "Three", "Four", "Five", "Six"]
 const colorArr = ["#333", "#d4d4d4", "#ff6666", "#333", "#d4d4d4", "#ff6666"]
+const contentArr = pageData.slice(2,6);
+console.log(contentArr);
 // 만들 총 페이지 수? 
 
 //root 요소 식별
@@ -64,7 +66,18 @@ window.addEventListener("load", function(){
       }
     });
     if(elem.id === "Two"){
+      //두번째 페이지에서 여러 요소가 만들어져야하므로 추가로 넣어둠
       event.target.style.backgroundColor = "#333";
+      console.log(event.target.innerHTML);
+      // event.target.innerHTML = "";
+      event.target.innerHTML = pageMaker(contentArr, "div","#333");
+    }
+    // 
+    if(event.target.id === elem.id){
+    console.log(elem.id);
+    console.log(event.target.id);
+      event.target.style.display = "block";
+      // 디스플레이를 "none"이 아니라 00페이지로 이동하는 연결을 해야한다. 
     }
   }
 });
