@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+    }
+
+    #root > div {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    
+    const root = document.getElementById('root');
+    const pageArray = ["first", "contents","clickbox", "pojectOne"];
+    
+
+    /*
+    */
+
+
+
+
+    function variationDiv(backgroundColor, tagName, idValue) {
+      let object = {
+        style : backgroundColor,
+        tagName : tagName,
+        idValue : idValue,
+      }
+      return `
+        <${object.tagName} id = "${object.idValue}" style="background-color: ${object.style} "></${object.tagName}>
+      
+      `;
+    }
+
+    console.log(variationDiv("#ccc", "li", "test"));
+    
+
+
+
+
+    function createPage(array) {
+      let elementArray = [];
+      array.forEach((value, index) => {
+        let getString = `<div id="page-${value}">page-${value}</div>`;
+        
+        elementArray.push(getString);
+      });
+      return elementArray.join('');
+    }
+
+    
+    
+    
+    let _intoRoot = `
+      ${createPage(pageArray)}
+    `;
+
+    root.addEventListener('click', function(event) {
+      console.log(`${event.target.id}`);
+      let elem = document.getElementById(`${event.target.id}`);
+      console.log(event.target.id);
+
+    })
+
+
+    root.innerHTML = _intoRoot;
+  </script>
+
+
+</body>
+</html>
