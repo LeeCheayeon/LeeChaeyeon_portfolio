@@ -5,6 +5,7 @@ import crateElem from "./module/divMaker.js";
 import indexMaker from "./module/index.js";
 import LoopMaker from "./module/Loopfunction.js";
 import rootEvent from "./module/rootEvent.js";
+import { indexclick } from "./module/function.js";
 
 const root= document.getElementById("root");
 console.log(root);
@@ -53,12 +54,12 @@ window.addEventListener("load", function(){
         console.log("esc");
         event.target.style.display = "none";
         pages[1].style.display = "block";
+        // 첫페이지에서 다음 페이지로 넘어가기전 div 클릭이벤트 ==== 
       } else if(event.target.id === "img"){
-        const eventsibling =event.target.nextElementSibling;  
-        console.dir(eventsibling);
-        event.target.parentElement.style.display = "block";
-        eventsibling.style.display = "block";
-        
+        indexclick(event.target);
+      }
+      else if(event.target.id === "none"){
+        indexclick(event.target);
       }
     }
   });

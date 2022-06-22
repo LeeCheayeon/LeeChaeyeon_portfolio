@@ -1,4 +1,4 @@
-import boxstyle from "./function.js";
+import {boxstyle} from "./function.js";
 import crateElem from "./divMaker.js";
 import pageMaker from "./pageMaker.js";
 import rootEvent from "./rootEvent.js";
@@ -22,17 +22,6 @@ function indexMaker(parentTag){
       value.style.display = "none";
     }
   });
-  
-  console.log(indexBox[1])
-  // One.addEventListener("click", function(event){
-  //   indexBox[1].style.display = "block";
-  //   // indexBox[1].style.rotate = "90deg";
-  //   if(event.target === indexBox[1]){
-  //     // console.log("none")
-  //     indexBox[2].style.display = "block"
-  //   }
-  //   console.log(event.target.id);
-  // })
 }
 
 export default indexMaker;
