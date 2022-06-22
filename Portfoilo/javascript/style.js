@@ -4,13 +4,8 @@ import pageMaker from "./module/pageMaker.js";
 import crateElem from "./module/divMaker.js";
 import indexMaker from "./module/index.js";
 import contentsMaker from "./module/contents.js";
-import thrMaker from "./module/3th.js";
-import Loop from "./module/Loopfunction.js";
-// 기준 root 식별
-// const seletor = {
-//   root : document.querySelector("#root"),
-//   first :document.querySelector("#index")
-// }
+import LoopMaker from "./module/Loopfunction.js";
+
 const root= document.getElementById("root");
 console.log(root);
 
@@ -25,22 +20,20 @@ window.addEventListener("load", function(){
   pages.forEach((value,index)=>{
     value.style.width = "100vw";
     value.style.height = "100vh";
-    // value.style.display = "block";
     // 첫페이지만 보이도록 제어 -========================
     if(value.id !== "One"){
       // id값이 one이 아닌 섹션은 전부 보이지않게 처리
       value.style.display = "none";
     }
   });
-  // console.log(root.children[0]);
   indexMaker(root.children[0]);
 
 
   // 클릭시 다음 페이지(2)로 넘어감===========
   root.addEventListener("click", function(event){
     let elem = document.getElementById(`${event.target.id}`);
-    console.log(elem.id);
-    console.log(event.target.id);
+    // console.log(elem.id);
+    // console.log(event.target.id);
     if(event.target.id === elem.id){
       event.target.style.display = "block";
       pages.forEach((value)=>{
@@ -49,17 +42,18 @@ window.addEventListener("load", function(){
         }
       });
       if(event.target.id === "Two"){
-        Loop(pages, event.target, pages, pages,"none");
-            // contentsMaker(root.children[1]);
-            root.children[1].addEventListener("click", function(event){
-              for(let i=0; i<pages.length; i++){
-                if(event.target.id === pages[i].id){
-                  pages[i].style.display = "block";
-                  pages[i].innerHTML = pageMaker(buttonData, "div", "#333")
-                }
-              }
-            });
-          }
-      }
+        // id의 값이 TWo일때 ============================
+        LoopMaker(pages, event.target, pages, pages,"block", root.children[1]);
+        // page 2의 목차 div를 눌렀을 때 =================
+          root.children[1].addEventListener("click", function(event){
+            LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
+          });
+        }else if(event.target.id === "esc"){
+          // esc 나가기 버튼을 눌렀을 때 =================
+          console.log("esc");
+          event.target.style.display = "none";
+          pages[1].style.display = "block";
+        }
+        }
   });
 });
