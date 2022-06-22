@@ -14,6 +14,8 @@ const root= document.getElementById("root");
 console.log(root);
 
 window.addEventListener("load", function(){
+  this.document.body.style.padding = 0;
+  this.document.body.style.margin = 0; 
   // 맨 첫화면 구성 =========================================
   indexMaker(root);
   // divMaker(root,'div', "fist");

@@ -1,5 +1,5 @@
 
-const pageArr = [1,2,3,4,5,6];
+// const pageArr = [1,2,3,4,5,6];
 const pageData = ["One", "Two", "Three", "Four", "Five", "Six"]
 const buttonData = ["Google", "T", "esc"]
 const colorArr = ["#333", "#d4d4d4", "#ff6666", "#333", "#d4d4d4", "#ff6666"]
@@ -26,7 +26,7 @@ function crateElem(backColor, idName, tagName){
 function pageMaker(array, tagname, backColor){
   let result = '';
   array.forEach((value) => {
-  //   result += `<${tagname} id="${value}">${value}-${index}</${tagname}>`
+  //result += `<${tagname} id="${value}">${value}-${index}</${tagname}>`
   result += crateElem(backColor,value,tagname);
   });
   return result;
@@ -41,16 +41,9 @@ window.addEventListener("load", function(){
 
   // 생성된 페이지 요소 식별
   const pages = Array.from(this.document.querySelectorAll("#root>div"));
-  // console.log(pages);
   pages.forEach((value,index)=>{
-    // console.log(value.id);
     value.style.width = "10vw";
     value.style.height = "10vw";
-//     value.style.backgroundColor = colorArr[index];
-//     if(value.id !== "One"){
-//       //맨처음 보여야하는 One 페이지를 제외하고 'none' 처리
-//       value.style.display = "none";
-    // }
   });
   root.addEventListener("click",function(event){
     let elem = document.getElementById(`${event.target.id}`);
@@ -68,13 +61,10 @@ window.addEventListener("load", function(){
     });
     if(elem.id === "Two"){
       //두번째 페이지에서 여러 요소가 만들어져야하므로 추가로 넣어둠
-      // event.target.style.backgroundColor = "#333";
-      // console.log(event.target.innerHTML);
       event.target.innerHTML = pageMaker(contentArr, "div","#333");
       // 2번째 페이지에 3~마지막 페이지 버튼이 있어야해서 생성함
       const contentsBox = document.querySelector("#Two");
       // 2페이지를 식별
-      // console.log(contentsBox);
       contentsBox.addEventListener("click", function(event){
         // 2페이지에 클릭이벤트
         console.log(event.target.id);
@@ -90,6 +80,7 @@ window.addEventListener("load", function(){
           }
         });
       }else if(event.target.id === "esc"){
+        // 만약 이벤트 타겟의 아이디가 esc라면 
         event.target.style.display = "none";
         console.dir(event.target);
         console.log(pages[1].style.display);
