@@ -28,7 +28,6 @@ window.addEventListener("load", function(){
   });
   indexMaker(root.children[0]);
 
-
   // 클릭시 다음 페이지(2)로 넘어감===========
   root.addEventListener("click", function(event){
     let elem = document.getElementById(`${event.target.id}`);
