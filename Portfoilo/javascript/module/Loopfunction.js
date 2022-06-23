@@ -1,5 +1,5 @@
 import contentsMaker from "./contents.js";
-import { buttonData,proRightDiv,proRightButnArr } from "./data.js";
+import { buttonData,proRightButnArr, contentArr } from "./data.js";
 import pageMaker from "./pageMaker.js";
 import proBaseMaker from "./projectBase.js";
 
@@ -11,7 +11,7 @@ function LoopMaker(lengthValue, ifOne, ifTwo,Target, displayValue, contentPar){
       contentsMaker(contentPar);
       if (event.target.id !== "One" && event.target.id !== "Two"){
         // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면
-        proBaseMaker(Target[i]);
+          proBaseMaker(Target[i]);
       }
     }
   }

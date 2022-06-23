@@ -1,5 +1,5 @@
 import contentsMaker from "./contents.js";
-import { buttonData,proRightDiv,proRightButnArr } from "./data.js";
+import { buttonData,proRightButnArr,protextboxArr } from "./data.js";
 import pageMaker from "./pageMaker.js";
 
 function proBaseMaker(target){
@@ -7,26 +7,21 @@ function proBaseMaker(target){
   <div class="upButBox">
     ${pageMaker(buttonData,"div","#333")}
   </div>
-    <artcle id="popUp"></artcle>
+    <artcle id="popUp" style="display:none;"></artcle>
   <div>
-    <div id="imgOne"></div>
-    <div class="rightBox">
-      ${pageMaker(proRightDiv,"div","none")}
+  <div id="imgOne"></div>
+  <div class="rightBox">
+    <div class="textBox">
+    ${pageMaker(protextboxArr,"div")}
+    </div>
+    <div>
+    ${pageMaker(proRightButnArr,"div","#fff")}
+    </div>
+    <div id="imgTwo"></div>
     </div>
     </div>
   </div>
   `;
-  
-  const butBox = document.getElementById("butnBox");
-  console.log(butBox);
-  butBox.innerHTML="";
-  butBox.innerHTML = `
-  ${pageMaker(proRightButnArr,"div","#fff")}
-  `;
-
-  const popUp = document.getElementById("popUp");
-  // popUp.style.alignItems
-  popUp.style.display = "none";
 }
 
 export default proBaseMaker;
