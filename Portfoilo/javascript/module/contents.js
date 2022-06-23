@@ -3,14 +3,14 @@ import { boxstyle, gridstyle, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
 
 function contentsMaker(parentTag){
+  displayStyle(parentTag,"flex", "center", "flexEnd");
+  // 왜 여기서 align-items: flex-end;가 안먹히는걸까?
   parentTag.innerHTML = `
   <div id="contents">
   ${pageMaker(contentArr, "div", "#333")}
   </div>
   `
 
-  displayStyle(parentTag,"flex", "center", "flexEnd");
-  // 왜 여기서 align-items: flex-end;가 안먹히는걸까?
   const content = document.getElementById("contents");
   boxstyle(content, "100vw", "50vh", "none");
   displayStyle(content, "flex","center", "flexEnd", "row");

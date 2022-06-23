@@ -8,7 +8,7 @@ import rootEvent from "./module/rootEvent.js";
 import { indexclick } from "./module/function.js";
 
 const root= document.getElementById("root");
-console.log(root);
+// console.log(root);
 
 window.addEventListener("load", function(){
   this.document.body.style.padding = 0;
@@ -49,7 +49,7 @@ window.addEventListener("load", function(){
         // esc 나가기 버튼을 눌렀을 때 ============================
         console.log("esc");
         event.target.style.display = "none";
-        pages[1].style.display = "block";
+        pages[1].style.display = "flex";
         // 첫페이지에서 다음 페이지로 넘어가기전 div 클릭이벤트 ==== 
       } else if(event.target.id === "img"){
         indexclick(event.target);
