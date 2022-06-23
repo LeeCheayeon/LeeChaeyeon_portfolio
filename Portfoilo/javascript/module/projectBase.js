@@ -1,5 +1,6 @@
 import contentsMaker from "./contents.js";
 import { buttonData,proRightButnArr,protextboxArr } from "./data.js";
+import { boxstyle, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
 
 function proBaseMaker(target){
@@ -8,7 +9,7 @@ function proBaseMaker(target){
     ${pageMaker(buttonData,"div","#333")}
   </div>
     <artcle id="popUp" style="display:none;"></artcle>
-  <div>
+  <div id="downBox">
   <div id="imgOne"></div>
   <div class="rightBox">
     <div class="textBox">

@@ -1,0 +1,20 @@
+@mixin flex($flex-j, $flex-a, $flex-d){
+  display: flex;
+  justify-content: $flex-j;
+  align-items: $flex-a;
+  flex-direction:$flex-d;
+}
+
+@mixin text($text-c, $text-s, $text-w) {
+  color: $text-c;
+  font-size: $text-s;
+  font-weight: $text-w;
+}
+
+@mixin box($box-w, $box-h,$box-c, $box-r, $box-f) {
+  width: $box-w;
+  height: $box-h;
+  background-color: $box-c;
+  border-radius: $box-r;
+  backdrop-filter: $box-f;
+}
