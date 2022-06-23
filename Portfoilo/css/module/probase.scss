@@ -1,0 +1,50 @@
+@import "./mixin.scss";
+
+.upButBox{
+  @include boxstyle(100vw, 10vh,none);
+  @include flex(center, center, row);
+  >div{
+    @include boxstyle(3vw, 3vw,none);
+    margin: 1.5vw;
+  }
+  >div:nth-child(2){
+    margin-right: 80vw;
+  }
+}
+
+#popUp{
+  @include boxstyle(100vw, 90vh, #ff6666);
+  position: absolute;
+  >div:nth-child(1){
+    @include boxstyle(3vw, 3vw,#333);
+
+  }
+}
+
+#downBox{
+  @include boxstyle(100vw, 90vh, none);
+  @include flex(center, center, row);
+  // border: 1px solid green;
+  >div:nth-child(1){
+    @include boxstyle(40vw,80vh, #d4d4d4);
+  }
+  >div:nth-child(2){
+    margin-left: 1vw;
+    @include boxstyle(50vw,80vh, #d4d4d4);
+    >div:nth-child(1){
+      @include boxstyle(50vw,30vh, none);
+    }
+    >div:nth-child(2){
+      @include boxstyle(50vw,7vh, none);
+      @include flex(center,center,row);
+      >div{
+        @include boxstyle(8vw, 4vh, #333);
+        margin: 2vw;
+      }
+    }
+    >div:nth-child(3){
+      @include boxstyle(50vw,43vh, none);
+      // border: 1px solid red;
+    }
+  }
+}

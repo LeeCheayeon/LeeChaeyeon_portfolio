@@ -110,21 +110,4 @@
   height: 43vh;
   background-color: none;
 }
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-#Two {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#contents {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=probase.css.map */

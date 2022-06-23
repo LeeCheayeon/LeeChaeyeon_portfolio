@@ -18,3 +18,9 @@
   border-radius: $box-r;
   backdrop-filter: $box-f;
 }
+
+@mixin boxstyle($box-w, $box-h,$box-c) {
+  width: $box-w;
+  height: $box-h;
+  background-color: $box-c;
+}

@@ -24,3 +24,12 @@ export function gridstyle(target,gridTemColumns,gridTemRows,gridGap){
   target.style.gridGap = gridGap;
 }
 // repeat(3, 200px)
+
+export function popEscClick(target){
+  if(target.id === "popEsc"){
+    const parent = target.parentNode.parentNode;
+    console.log(parent);
+    parent.style.display = "block";
+    target.parentNode.style.display = "none";
+  }
+}

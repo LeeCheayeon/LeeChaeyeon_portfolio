@@ -8,7 +8,10 @@ function proBaseMaker(target){
   <div class="upButBox">
     ${pageMaker(buttonData,"div","#333")}
   </div>
-    <artcle id="popUp" style="display:none;"></artcle>
+    <artcle id="popUp" style="display:none;">
+    <div id="popEsc">x</div>
+    <div></div>
+    </artcle>
   <div id="downBox">
   <div id="imgOne"></div>
   <div class="rightBox">

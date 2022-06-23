@@ -5,7 +5,8 @@ import crateElem from "./module/divMaker.js";
 import indexMaker from "./module/index.js";
 import LoopMaker from "./module/Loopfunction.js";
 import rootEvent from "./module/rootEvent.js";
-import { indexclick } from "./module/function.js";
+import { indexclick, popEscClick } from "./module/function.js";
+import ViewMoreDiv from "./module/veiwmore.js";
 
 const root= document.getElementById("root");
 // console.log(root);
@@ -14,7 +15,7 @@ window.addEventListener("load", function(){
   this.document.body.style.padding = 0;
   this.document.body.style.margin = 0; 
   // 전체 페이지 생성=============================================
-  root.innerHTML = pageMaker(pageData,"section","#ff6666");
+  root.innerHTML = pageMaker(pageData,"section","none");
   // 생성된 페이지 요소 식별
   const pages = Array.from(this.document.querySelectorAll("#root>section"));
   // 넓이, 높이값 지정 등 공통된 부분 스타일링 가능 =================
@@ -30,14 +31,11 @@ window.addEventListener("load", function(){
   indexMaker(root.children[0]);  
   // // 클릭시 다음 페이지(2)로 넘어감================================
   root.addEventListener("click", function(event){
-    let elem = document.getElementById(`${event.target.id}`);
-    if(event.target.id === elem.id){
-      event.target.style.display = "block";
-      pages.forEach((value)=>{
-        if(value.id !== event.target.id){
-          value.style.display = "none";
-        }
-      });
+    pages.forEach((value)=>{
+    if(value.id !== event.target.id){
+    value.style.display = "none";
+    }
+    });
       if(event.target.id === "Two"){
       // id의 값이 TWo일때 =======================================
       LoopMaker(pages, event.target, pages, pages,"block", root.children[1]);
@@ -51,14 +49,20 @@ window.addEventListener("load", function(){
         event.target.style.display = "none";
         pages[1].style.display = "flex";
         // 첫페이지에서 다음 페이지로 넘어가기전 div 클릭이벤트 ==== 
+      }else if(event.target.id === "View More"){
+        const targetParent = event.target.parentNode.parentNode.parentNode.parentNode;
+        targetParent.style.display="block";
+        const popUp = document.getElementById("popUp");
+        popUp.style.display = "block";
+        // ViewMoreDiv(event.target);
+      }else if(event.target.id === "popEsc"){
+        // console.log(event.target.parentNode.parentNode);
+        popEscClick(event.target);
       } else if(event.target.id === "img"){
         indexclick(event.target);
       }
       else if(event.target.id === "none"){
         indexclick(event.target);
-      }else if(event.target.id === "View More"){
-        console.log(event.target)
       }
-    }
-  });
+    });
 });
