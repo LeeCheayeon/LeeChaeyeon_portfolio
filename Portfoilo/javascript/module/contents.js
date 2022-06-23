@@ -1,4 +1,5 @@
-import { contentArr } from "./data.js";
+import { colorArr, contentArr } from "./data.js";
+import { boxstyle, gridstyle, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
 
 function contentsMaker(parentTag){
@@ -8,12 +9,17 @@ function contentsMaker(parentTag){
   </div>
   `
 
+  displayStyle(parentTag,"flex", "center", "flexEnd");
+  // 왜 여기서 align-items: flex-end;가 안먹히는걸까?
+  const content = document.getElementById("contents");
+  boxstyle(content, "100vw", "50vh", "none");
+  displayStyle(content, "flex","center", "flexEnd", "row");
+  // 왜 여기서 align-items: flex-end;가 안먹히는걸까?
   const contents = Array.from(document.querySelectorAll("#contents>div"));
-  contents.forEach((value)=>{
+  contents.forEach((value, index)=>{
     // 목차 박스 카드용으로 간단하게 div 지정 
+    boxstyle(value,"20vw", "40vh", colorArr[index]);
   });
-  console.log(contents);
-  // const co
 }
 
 export default contentsMaker;

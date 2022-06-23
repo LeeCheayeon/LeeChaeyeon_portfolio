@@ -28,11 +28,7 @@ window.addEventListener("load", function(){
     }
   });
   indexMaker(root.children[0]);  
-
-  // rootEvent(root);
-
   // // 클릭시 다음 페이지(2)로 넘어감================================
-  rootEvent(root);
   root.addEventListener("click", function(event){
     let elem = document.getElementById(`${event.target.id}`);
     if(event.target.id === elem.id){
@@ -60,6 +56,8 @@ window.addEventListener("load", function(){
       }
       else if(event.target.id === "none"){
         indexclick(event.target);
+      }else if(event.target.id === "View More"){
+        console.log(event.target)
       }
     }
   });

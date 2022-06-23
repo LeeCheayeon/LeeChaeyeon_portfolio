@@ -10,3 +10,17 @@ export function indexclick(target){
   target.parentElement.style.display = "block";
   eventsibling.style.display = "block";
 }
+
+export function displayStyle(target,display,justcon,alitems,flexDirco){
+  target.style.display = display;
+  target.style.justifyContent = justcon;
+  target.style.alignItems = alitems;
+  target.style.flexDirection = flexDirco;
+}
+
+export function gridstyle(target,gridTemColumns,gridTemRows,gridGap){
+  target.style.gridTemplateColumns = gridTemColumns;
+  target.style.gridTemplateRows = gridTemRows;
+  target.style.gridGap = gridGap;
+}
+// repeat(3, 200px)
