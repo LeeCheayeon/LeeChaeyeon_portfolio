@@ -10,11 +10,11 @@ function LoopMaker(lengthValue, ifOne, ifTwo,Target, displayValue, contentPar){
     if(ifOne.id === ifTwo[i].id){
       Target[i].style.display = displayValue;
       // contentsMaker(contentPar);
-      console.log(Target[i]);
+      // console.log(Target[i]);
       if (ifOne.id !== "One" && ifOne.id !== "Two"){
         // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면
         if(ifOne.id === lastpage){
-          console.log("last");
+          // console.log("last");
           Target[i].innerHTML = pageMaker(lastPageData,"div");
         }else{
         proBaseMaker(Target[i]);

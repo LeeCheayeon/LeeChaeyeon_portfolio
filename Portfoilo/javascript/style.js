@@ -6,6 +6,7 @@ import LoopMaker from "./module/Loopfunction.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
 import contentsMaker from "./module/contents.js";
+import show from "./module/fadein.js";
 
 const root= document.getElementById("root");
 
@@ -30,6 +31,7 @@ window.addEventListener("load", function(){
       contentsMaker(pages[1]);
       // page 2의 목차 div를 눌렀을 때 ============================
       root.children[1].addEventListener("click", function(event){
+        console.log(event.target);
         pages[1].style.display = "none";
         LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
       });
@@ -46,6 +48,7 @@ window.addEventListener("load", function(){
     } else if(event.target.id === "img"){
       indexclick(event.target);
     }else if(event.target.id === "none"){
+      // console.dir(event.target);
       indexclick(event.target);
     }
   });

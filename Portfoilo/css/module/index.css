@@ -1,0 +1,11 @@
+#divbox {
+  overflow: hidden;
+}
+
+#none {
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+/*# sourceMappingURL=index.css.map */

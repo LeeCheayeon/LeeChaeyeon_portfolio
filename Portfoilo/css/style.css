@@ -111,6 +111,34 @@
   background-color: none;
 }
 
+#divbox {
+  overflow: hidden;
+}
+
+#none {
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+#Two {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#contents {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 1px solid red;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1vw;
+  overflow: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;

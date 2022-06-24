@@ -1,6 +1,7 @@
 import crateElem from "./divMaker.js";
 import pageMaker from "./pageMaker.js"
 import { pageData} from "./data.js";
+import show  from "./fadein.js";
 
 export function boxstyle(target, width, height, backColor) {
   target.style.width = width;
@@ -9,9 +10,22 @@ export function boxstyle(target, width, height, backColor) {
 }
 
 export function indexclick(target){
-  const eventsibling =target.nextElementSibling;  
-  target.parentElement.style.display = "block";
-  eventsibling.style.display = "block";
+  if(target.id === "none"){
+    const eventsibling =target.parentNode.nextElementSibling;  
+    eventsibling.style.display = "block";
+  }else if(target.id === "img"){
+    // 만약 img라면 클릭 후 dispaly가 블락이 되고.. 
+    // 오퍼시티가 점점 증가 후 다음 형제 페이지로 넘어가기
+    console.log(target)
+    const eventsibling =target.nextElementSibling;  
+    eventsibling.style.display = "block";
+    eventsibling.style.opacity = 1;
+    // setInterval(show(target), 100);
+  }else{
+    const eventsibling =target.nextElementSibling;  
+    eventsibling.style.display = "block";
+    // intervalID = setInterval(show,200);
+  }
 }
 
 export function displayStyle(target,display,justcon,alitems,flexDirco){

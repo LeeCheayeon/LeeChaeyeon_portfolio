@@ -1,0 +1,12 @@
+#Two{
+  // overflow: hidden;
+  align-items: flex-end;
+}
+
+#contents{
+  align-items: flex-end;
+  border: 1px solid red;
+  grid-template-columns: repeat(10,1fr);
+  grid-gap: 1vw;
+  overflow: hidden;
+}

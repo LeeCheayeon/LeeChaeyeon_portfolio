@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btnfadeOut"> Fade Out</button>
+  <button class="btnfadeIn"> Fade In</button>
+  <div id="img1">글자가 이쁘게 사라진다.</div>
+
+  <script>
+    let opacity =0;
+    let intervalID=0;
+      
+    let target = document.getElementById("img1")
+    let fadeout = document.querySelector(".btnfadeOut");
+    let fadein = document.querySelector(".btnfadeIn");
+  
+    //순수 자바스크립트 클릭 이벤트 Fsade out 실행
+    target.addEventListener('click', function() {
+      intervalID = setInterval(hide,100);
+    });
+      
+    //순수 자바스크립트 클릭 이벤트 Fade in
+    fadein.addEventListener('click', function() {
+      intervalID = setInterval(show,100);
+    });
+   
+    function hide(){
+      var div = document.getElementById("img1");
+      opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+      
+      if(opacity>0){
+              //Fade out 핵심 부분
+        opacity = opacity-0.1;
+        target.style.opacity=opacity;
+        //img.style.opacity=opacity;
+      }
+      else{
+        clearInterval(intervalID);
+      }
+    }
+    
+    function show(){
+      var div = document.getElementById("img1");
+      opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+      
+      if(opacity<1){
+            //Fade in 핵심 부분
+        opacity = opacity+0.1;
+        target.style.opacity=opacity;
+        //img.style.opacity=opacity;
+      }
+      else{
+        clearInterval(intervalID);
+      }
+    }	 
+      </script>
+</body>
+</html>
