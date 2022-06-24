@@ -25,9 +25,7 @@ function proBaseMaker(target){
   </div>
   `;
 
-  // const popUp = document.getElementById("popUp");
-  // console.log(popUp);
-  // popUp.style.display = "none";
+  // if(target.id === )
 }
 
 export default proBaseMaker;

@@ -1,5 +1,6 @@
 export const pageData = ["One", "Two", "Three", "Four", "Five", "Six"]
 export const buttonData = ["Google", "T", "esc"]
+export const lastPageData = ["typing", "else"]
 export const protextboxArr = ["Title", "subT"]
 export const popArr = ["popEsc", "view"]
 export const proRightButnArr = ["View More", "Homepage Link"]

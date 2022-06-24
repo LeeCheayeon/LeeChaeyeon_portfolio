@@ -36,9 +36,9 @@ window.addEventListener("load", function(){
     // page 2의 목차 div를 눌렀을 때 ============================
       root.children[1].addEventListener("click", function(event){
         LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
-        const popUp = document.getElementById("popUp");
-        console.log(popUp);
-        // popUp.style.display = "none";
+        // const lastpage = pageData[pageData.length-1];
+        // console.log(lastpage);
+        // console.log(pageData[pageData.length-1]);
       });
 
     // esc 나가기 버튼을 눌렀을 때 ============================
@@ -49,20 +49,6 @@ window.addEventListener("load", function(){
     // 첫페이지에서 다음 페이지로 넘어가기전 div 클릭이벤트 ==== 
     }else if(event.target.id === "View More"){
       ViewMoreDiv(event.target);
-      // const textBox = document.getElementsByClassName("textBox");
-      // console.log(textBox.nextElementSibling);
-      // veiwmore.addEventListener("click", function(event){
-      // });
-      //   console.log("click")
-        // const targetParent = event.target.parentNode.parentNode.parentNode.parentNode;
-        // targetParent.style.display="block";
-        // const popUp = event.target.parentNode.parentNode.parentNode.previousElementSibling;
-        // popUp.style.display="block";
-      // console.dir(popUp.parentNode.parentNode.parentNode.previousElementSibling);
-      // console.dir(popUp);
-      // console.dir(popUp);
-      // console.log(popUp);
-      // popUp.style.display = "block";
     }else if(event.target.id === "popEsc"){
       popEscClick(event.target);
     } else if(event.target.id === "img"){
