@@ -36,9 +36,6 @@ window.addEventListener("load", function(){
     // page 2의 목차 div를 눌렀을 때 ============================
       root.children[1].addEventListener("click", function(event){
         LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
-        // const lastpage = pageData[pageData.length-1];
-        // console.log(lastpage);
-        // console.log(pageData[pageData.length-1]);
       });
 
     // esc 나가기 버튼을 눌렀을 때 ============================
