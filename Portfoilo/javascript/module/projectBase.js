@@ -1,17 +1,15 @@
 import contentsMaker from "./contents.js";
-import { buttonData,proRightButnArr,protextboxArr } from "./data.js";
-import { boxstyle, displayStyle } from "./function.js";
+import { buttonData,proRightButnArr,protextboxArr,popArr } from "./data.js";
+import { boxstyle, displayStyle,popUpMaker } from "./function.js";
 import pageMaker from "./pageMaker.js";
+import crateElem from "./divMaker.js";
 
 function proBaseMaker(target){
   target.innerHTML = `
   <div class="upButBox">
     ${pageMaker(buttonData,"div","#333")}
   </div>
-    <artcle id="popUp" style="display:none;">
-    <div id="popEsc">x</div>
-    <div></div>
-    </artcle>
+  ${popUpMaker('artcle',"popUp",popArr)}
   <div id="downBox">
   <div id="imgOne"></div>
   <div class="rightBox">
@@ -26,6 +24,10 @@ function proBaseMaker(target){
     </div>
   </div>
   `;
+
+  // const popUp = document.getElementById("popUp");
+  // console.log(popUp);
+  // popUp.style.display = "none";
 }
 
 export default proBaseMaker;

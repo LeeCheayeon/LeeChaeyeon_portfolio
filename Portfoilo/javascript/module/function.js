@@ -1,3 +1,6 @@
+import crateElem from "./divMaker.js";
+import pageMaker from "./pageMaker.js"
+
 export function boxstyle(target, width, height, backColor) {
   target.style.width = width;
   target.style.height = height;
@@ -32,4 +35,11 @@ export function popEscClick(target){
     parent.style.display = "block";
     target.parentNode.style.display = "none";
   }
+}
+
+export function popUpMaker(tagname,idname,array){
+  const inMake = pageMaker(array,"div");
+  return `
+  <${tagname} id="${idname}" style = "display: none;">${inMake}</${tagname}>
+  `;
 }

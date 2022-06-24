@@ -9,10 +9,11 @@ function LoopMaker(lengthValue, ifOne, ifTwo,Target, displayValue, contentPar){
     if(ifOne.id === ifTwo[i].id){
       Target[i].style.display = displayValue;
       contentsMaker(contentPar);
-      if (event.target.id !== "One" && event.target.id !== "Two"){
-        // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면
-          proBaseMaker(Target[i]);
-      }
+      if (ifOne.id !== "One" && ifOne.id !== "Two"){
+      // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면
+      Target[i].style.display = displayValue;
+      proBaseMaker(Target[i]);
+    }
     }
   }
 }

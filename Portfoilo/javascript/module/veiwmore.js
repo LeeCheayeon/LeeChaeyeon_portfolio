@@ -2,27 +2,11 @@ import contentsMaker from "./contents.js";
 import pageMaker from "./pageMaker.js";
 import crateElem from "./divMaker.js";
 
-function ViewMoreDiv(target){
-  const targetParent = target.parentNode.parentNode.parentNode.parentNode;
-  // console.log(targetParent);
+function ViewMoreDiv(Target){
+  const targetParent = Target.parentNode.parentNode.parentNode.parentNode;
   targetParent.style.display="block";
-  const popUp = document.getElementById("popUp");
-  popUp.style.display = "block";
-  // popUp.innerHTML= `
-  // <div id="popEsc">x</div>
-  // <div>
-  // </div>
-  // `;
-
-  // const popEsc =document.getElementById("popEsc");
-  // popEsc.addEventListener("click", function(event){
-  //   if(event.target.id === "popEsc"){
-  //     const parent = event.target.parentNode.parentNode;
-  //     console.log(parent);
-  //     parent.style.display = "block";
-  //     popUp.style.display = "none";
-  //   }
-  // });
+  const popUp = Target.parentNode.parentNode.parentNode.previousElementSibling;
+  popUp.style.display="block";
 }
 
 export default ViewMoreDiv;
