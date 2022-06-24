@@ -9,7 +9,7 @@ function LoopMaker(lengthValue, ifOne, ifTwo,Target, displayValue, contentPar){
   for(let i=0; i<lengthValue.length; i++){
     if(ifOne.id === ifTwo[i].id){
       Target[i].style.display = displayValue;
-      contentsMaker(contentPar);
+      // contentsMaker(contentPar);
       console.log(Target[i]);
       if (ifOne.id !== "One" && ifOne.id !== "Two"){
         // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면

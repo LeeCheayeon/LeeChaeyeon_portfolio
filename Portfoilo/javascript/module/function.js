@@ -1,5 +1,6 @@
 import crateElem from "./divMaker.js";
 import pageMaker from "./pageMaker.js"
+import { pageData} from "./data.js";
 
 export function boxstyle(target, width, height, backColor) {
   target.style.width = width;
@@ -9,7 +10,6 @@ export function boxstyle(target, width, height, backColor) {
 
 export function indexclick(target){
   const eventsibling =target.nextElementSibling;  
-  // console.dir(eventsibling);
   target.parentElement.style.display = "block";
   eventsibling.style.display = "block";
 }
@@ -42,4 +42,19 @@ export function popUpMaker(tagname,idname,array){
   return `
   <${tagname} id="${idname}" style = "display: none;">${inMake}</${tagname}>
   `;
+}
+
+const lastpage = pageData[pageData.length-1];
+console.log(lastpage);
+export function EscClick (target, displayviewDiv){
+  if(target.parentNode.id === lastpage){
+    console.log("last");
+    const targetEsc = target.parentNode;
+    targetEsc.style.display = "none";
+    displayviewDiv[1].style.display = "flex";
+  }else{
+    const targetEsc = target.parentNode.parentNode;
+    targetEsc.style.display = "none";
+    displayviewDiv[1].style.display = "flex";
+  }
 }
