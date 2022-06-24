@@ -1,10 +1,8 @@
 // js 파일
-import {pageData,buttonData,colorArr,contentArr} from "./module/data.js";
+import {pageData} from "./module/data.js";
 import pageMaker from "./module/pageMaker.js";
-import crateElem from "./module/divMaker.js";
 import indexMaker from "./module/index.js";
 import LoopMaker from "./module/Loopfunction.js";
-import rootEvent from "./module/rootEvent.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
 import contentsMaker from "./module/contents.js";
@@ -26,11 +24,6 @@ window.addEventListener("load", function(){
   indexMaker(root.children[0]);  
   // // 클릭시 다음 페이지(2)로 넘어감================================
   root.addEventListener("click", function(event){
-    // pages.forEach((value)=>{
-    // if(value.id !== event.target.id){
-    // value.style.display = "none";
-    // }
-    // });
     if(event.target.id === "Two"){
       pages[0].style.display = "none";
       // id의 값이 TWo일때 =======================================
