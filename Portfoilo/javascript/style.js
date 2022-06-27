@@ -6,7 +6,6 @@ import LoopMaker from "./module/Loopfunction.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
 import contentsMaker from "./module/contents.js";
-import show from "./module/fadein.js";
 
 const root= document.getElementById("root");
 
@@ -42,7 +41,7 @@ window.addEventListener("load", function(){
 
     // esc 나가기 버튼을 눌렀을 때 ============================
     }else if(event.target.id === "esc"){
-      console.log(event.target.parentNode.parentNode);
+      // console.log(event.target.parentNode.parentNode);
       EscClick(event.target, pages);
     // 첫페이지에서 다음 페이지로 넘어가기전 div 클릭이벤트 ==== 
     }else if(event.target.id === "View More"){
@@ -54,6 +53,8 @@ window.addEventListener("load", function(){
     }else if(event.target.id === "none"){
       // console.dir(event.target);
       indexclick(event.target);
+    }else if(event.target.id === "contents"){
+      event.target.parentNode.style.display = "flex";
     }
   });
 });

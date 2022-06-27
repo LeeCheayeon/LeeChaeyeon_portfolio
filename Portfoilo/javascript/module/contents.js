@@ -13,14 +13,15 @@ function contentsMaker(parentTag,target,targetP, targetPS){
   `
 
   const content = document.getElementById("contents");
-  // boxstyle(content, "100vw", "50vh", "none");
-  displayStyle(content, "flex","center", "flexEnd", "row");
+  boxstyle(content, "100vw", "80vh", "flex");
+  displayStyle(content, "flex","center", "flexEnd", "column");
+  content.classList.add("items");
   // 왜 여기서 align-items: flex-end;가 안먹히는걸까?
   const contents = Array.from(document.querySelectorAll("#contents>div"));
   contents.forEach((value, index)=>{
     // 목차 박스 카드용으로 간단하게 div 지정 
     boxstyle(value,"20vw", "40vh", colorArr[index]);
-    value.classList.add('items');
+    value.classList.add('item');
   });
 
   const slider = document.querySelector("#contents")
