@@ -134,6 +134,9 @@ html {
 }
 
 #Two {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,15 +144,14 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0;
 }
 
 .items {
-  border: 1px solid red;
-  overflow-x: scroll;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow-x: hidden;
   overflow-y: hidden;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -165,6 +167,7 @@ html {
   will-change: transform;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
+  padding-top: 25vh;
 }
 
 .items.active {
@@ -176,17 +179,124 @@ html {
 }
 
 .item {
+  width: 18vw;
+  height: 55vh;
   margin: 1vw;
+  position: relative;
+}
+
+.inline {
+  width: 16vw;
+  height: 47vh;
+  border: 2px solid #fff;
+}
+
+.item:nth-child(4n+1) {
+  background: tomato;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item:nth-child(4n+1) > div > div {
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+}
+
+.item:nth-child(4n+1) > div > div:nth-child(1) {
+  font-size: 300%;
+}
+
+.item:nth-child(4n+1) > div > div:nth-child(2) {
+  font-size: 150%;
+}
+
+.item:nth-child(4n+2) {
+  background: darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item:nth-child(4n+2) > div > div {
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+}
+
+.item:nth-child(4n+2) > div > div:nth-child(1) {
+  font-size: 300%;
+}
+
+.item:nth-child(4n+2) > div > div:nth-child(2) {
+  font-size: 150%;
+}
+
+.item:nth-child(4n+3) {
+  background: cadetblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item:nth-child(4n+3) > div > div {
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+}
+
+.item:nth-child(4n+3) > div > div:nth-child(1) {
+  font-size: 300%;
+}
+
+.item:nth-child(4n+3) > div > div:nth-child(2) {
+  font-size: 150%;
+}
+
+.item:nth-child(4n+4) {
+  background: sandybrown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item:nth-child(4n+4) > div > div {
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+}
+
+.item:nth-child(4n+4) > div > div:nth-child(1) {
+  font-size: 300%;
+}
+
+.item:nth-child(4n+4) > div > div:nth-child(2) {
+  font-size: 150%;
 }
 
 * {

@@ -4,6 +4,11 @@ export const lastPageData = ["esc","typing", "else"]
 export const protextboxArr = ["Title", "subT"]
 export const popArr = ["popEsc", "view"]
 export const proRightButnArr = ["View More", "Homepage Link"]
-export const colorArr = ["#333", "#d4d4d4", "#ff6666", "#333", "#d4d4d4", "#ff6666"]
-// export const contentArr = pageData.slice(2,6);
-export const contentArr = [1,2,3,4,5,6,7,8,9,10];
+export const colorArr = ["#333", "#d4d4d4", "#ff6666", '#c6c6c6']
+export const contentArr = pageData.slice(2,6);
+
+let contentArr1 = contentArr;
+let contentArr2 = contentArr;
+let contentArr3 = contentArr;
+export const contentArr_3 = contentArr1.concat(contentArr2, contentArr3);
+console.log(contentArr_3);

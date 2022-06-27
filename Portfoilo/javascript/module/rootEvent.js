@@ -1,6 +1,6 @@
 // js 파일
 // import LoopMaker from "./module/Loopfunction.js";
-import LoopMaker from "./Loopfunction.js";
+import {LoopMaker} from "./Loopfunction.js";
 
 const pages = Array.from(document.querySelectorAll("#root>section"));
   // 클릭시 다음 페이지(2)로 넘어감================================

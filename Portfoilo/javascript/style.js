@@ -2,7 +2,7 @@
 import {pageData} from "./module/data.js";
 import pageMaker from "./module/pageMaker.js";
 import indexMaker from "./module/index.js";
-import LoopMaker from "./module/Loopfunction.js";
+// import LoopMaker from "./module/Loopfunction.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
 import contentsMaker from "./module/contents.js";
