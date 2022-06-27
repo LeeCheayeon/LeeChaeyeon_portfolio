@@ -1,3 +1,4 @@
+import contactTyping from "./contact.js";
 import contentsMaker from "./contents.js";
 import { buttonData,proRightButnArr, contentArr,pageData, lastPageData } from "./data.js";
 import pageMaker from "./pageMaker.js";
@@ -14,7 +15,7 @@ export function LoopMaker(lengthValue, ifOne, ifTwo,Target, displayValue){
       if (ifOne.id !== "One" && ifOne.id !== "Two"){
         // 만약 이벤트 타겟의 아이디가 "One","Two"가 아니라면
         if(ifOne.id === lastpage){
-          Target[i].innerHTML = pageMaker(lastPageData,"div");
+          contactTyping(Target[i], lastPageData);
         }else{
         proBaseMaker(Target[i]);
       }

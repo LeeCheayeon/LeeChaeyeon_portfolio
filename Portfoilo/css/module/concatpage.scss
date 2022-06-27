@@ -1,0 +1,45 @@
+@import "./mixin.scss";
+
+#Six{
+  @include flex(center, center, column);
+}
+
+#esc{
+  @include boxstyle(3vw,3vw,#333);
+}
+
+#typing{
+  width: 80vw;
+  height: 30vh;
+  border: 1px solid green;
+}
+
+#typeText{
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.cursor{
+  display: inline-block;
+  background-color: #333;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing{
+  animation: none;
+}
+
+@keyframes blink{
+0%{background-color: #333;}
+49%{background-color: #333;}
+50%{background-color: transparent;}
+99%{background-color: transparent;}
+100%{background-color: #333;}
+};
+
+#else{
+  border: 1px solid red;
+}

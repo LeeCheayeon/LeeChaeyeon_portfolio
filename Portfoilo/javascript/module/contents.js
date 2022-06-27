@@ -4,6 +4,7 @@ import pageMaker from "./pageMaker.js";
 import {LoopMaker, LoopContent} from "./Loopfunction.js";
 
 function contentsMaker(parentTag,target,targetP, targetPS){
+  parentTag.classList.add('slider');
   displayStyle(parentTag,"flex", "center", "flexEnd");
   parentTag.innerHTML = `
   <div id="contents">
@@ -11,7 +12,7 @@ function contentsMaker(parentTag,target,targetP, targetPS){
   </div>
   `
   const content = document.getElementById("contents");
-  boxstyle(content, "100vw", "80vh", "flex");
+  boxstyle(content, "100vw", "100vh", "flex");
   displayStyle(content, "flex","center", "flexEnd", "column");
   content.classList.add("items");
   const contents = Array.from(document.querySelectorAll("#contents>div"));
@@ -81,10 +82,10 @@ target.addEventListener("click", function(event){
   console.dir(event.target);
   if(event.target.classList.value === "inline"){
     const targetpar =event.target.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
+    LoopMaker(targetP, targetpar, targetP, targetP,"flex", target)
   }else{
     const targetpar =event.target.parentNode.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
+    LoopMaker(targetP, targetpar, targetP, targetP,"flex", target)
   }
 });
 }
