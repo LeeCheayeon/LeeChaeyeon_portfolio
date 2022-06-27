@@ -5,4 +5,5 @@ export const protextboxArr = ["Title", "subT"]
 export const popArr = ["popEsc", "view"]
 export const proRightButnArr = ["View More", "Homepage Link"]
 export const colorArr = ["#333", "#d4d4d4", "#ff6666", "#333", "#d4d4d4", "#ff6666"]
-export const contentArr = pageData.slice(2,6);
+// export const contentArr = pageData.slice(2,6);
+export const contentArr = [1,2,3,4,5,6,7,8,9,10,11,12];

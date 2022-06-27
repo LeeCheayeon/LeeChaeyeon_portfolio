@@ -28,13 +28,17 @@ window.addEventListener("load", function(){
     if(event.target.id === "Two"){
       pages[0].style.display = "none";
       // id의 값이 TWo일때 =======================================
-      contentsMaker(pages[1]);
+      contentsMaker(pages[1],root.children[1],pages,pages[1]);
+      // if(event.target.id === "contents"){
+      //   console.log(event.target);
+
+      // }
       // page 2의 목차 div를 눌렀을 때 ============================
-      root.children[1].addEventListener("click", function(event){
-        console.log(event.target);
-        pages[1].style.display = "none";
-        LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
-      });
+      // root.children[1].addEventListener("click", function(event){
+      //   console.log(event.target);
+      //   pages[1].style.display = "none";
+      //   LoopMaker(pages, event.target, pages, pages,"block", root.children[1])
+      // });
 
     // esc 나가기 버튼을 눌렀을 때 ============================
     }else if(event.target.id === "esc"){
@@ -53,3 +57,5 @@ window.addEventListener("load", function(){
     }
   });
 });
+
+
