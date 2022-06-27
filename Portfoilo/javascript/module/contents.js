@@ -82,10 +82,10 @@ target.addEventListener("click", function(event){
   console.dir(event.target);
   if(event.target.classList.value === "inline"){
     const targetpar =event.target.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"flex", target)
+    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
   }else{
     const targetpar =event.target.parentNode.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"flex", target)
+    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
   }
 });
 }
