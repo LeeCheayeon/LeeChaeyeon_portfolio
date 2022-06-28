@@ -1,4 +1,9 @@
 @import "./module/probase.scss";
 @import "./module/index.scss";
 @import "./module/slider.scss";
-@import "./module/concatpage.scss"
+@import "./module/concatpage.scss";
+
+*{
+  padding: 0;
+  margin: 0;
+}

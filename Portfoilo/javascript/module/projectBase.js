@@ -1,8 +1,6 @@
-import contentsMaker from "./contents.js";
 import { buttonData,proRightButnArr,protextboxArr,popArr } from "./data.js";
-import { boxstyle, displayStyle,popUpMaker } from "./function.js";
+import {popUpMaker } from "./function.js";
 import pageMaker from "./pageMaker.js";
-import crateElem from "./divMaker.js";
 
 function proBaseMaker(target){
   target.innerHTML = `
@@ -24,8 +22,6 @@ function proBaseMaker(target){
     </div>
   </div>
   `;
-
-  // if(target.id === )
 }
 
 export default proBaseMaker;

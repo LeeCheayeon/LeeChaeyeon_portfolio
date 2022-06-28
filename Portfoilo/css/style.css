@@ -181,7 +181,7 @@ html {
 
 .inline {
   width: 16vw;
-  height: 47vh;
+  height: 50vh;
   border: 2px solid #fff;
 }
 
@@ -315,38 +315,61 @@ html {
   background-color: #333;
 }
 
-#typing {
+#container {
   width: 80vw;
   height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid green;
-}
-
-#typeText {
-  font-size: 3rem;
-  text-align: center;
   letter-spacing: 0.1rem;
-}
-
-.cursor {
-  display: inline-block;
+  text-align: center;
   background-color: #333;
-  margin-left: 0.1rem;
-  width: 3px;
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
 }
 
-.cursor.typing {
-  -webkit-animation: none;
-          animation: none;
+#container > p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+#container p span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+
+#container p span.cursor {
+  display: inline;
+  vertical-align: middle;
+  border-right: .05em solid #ccc;
+  -webkit-animation: blink-caret 0.7s infinite;
+          animation: blink-caret 0.7s infinite;
+}
+
+#container p span.cursor .typing {
+  -webkit-animation: blink-caret 1s infinite;
+          animation: blink-caret 1s infinite;
 }
 
 @-webkit-keyframes blink {
   0% {
-    background-color: #333;
+    background-color: #ccc;
   }
   49% {
-    background-color: #333;
+    background-color: #ccc;
   }
   50% {
     background-color: transparent;
@@ -355,16 +378,16 @@ html {
     background-color: transparent;
   }
   100% {
-    background-color: #333;
+    background-color: #ccc;
   }
 }
 
 @keyframes blink {
   0% {
-    background-color: #333;
+    background-color: #ccc;
   }
   49% {
-    background-color: #333;
+    background-color: #ccc;
   }
   50% {
     background-color: transparent;
@@ -373,11 +396,34 @@ html {
     background-color: transparent;
   }
   100% {
-    background-color: #333;
+    background-color: #ccc;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ccc;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ccc;
   }
 }
 
 #else {
   border: 1px solid red;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

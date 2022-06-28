@@ -1,9 +1,6 @@
 import {boxstyle, displayStyle} from "./function.js";
 import crateElem from "./divMaker.js";
-import pageMaker from "./pageMaker.js";
-import rootEvent from "./rootEvent.js";
 
-// One.innerHTML = crateElem('#333', "Two", "div");
 function indexMaker(parentTag){
   const imgname = "div.svg"
   parentTag.innerHTML = `
