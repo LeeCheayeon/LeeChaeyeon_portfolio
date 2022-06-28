@@ -2,20 +2,22 @@
 
 #Six{
   @include flex(center, center, column);
+  overflow: hidden
 }
 
-#esc{
+#Esc{
   @include boxstyle(3vw,3vw,#333);
+  margin: 1.5vw;
+  margin-left: 93vw;
 }
 
 #container{
-  width: 80vw;
-  height: 30vh;
   @include flex(center, center, column);
+  @include boxstyle(100vw, 35vh, #333);
+  margin-top: 14vh;
   border: 1px solid green;
   letter-spacing: 0.1rem;
   text-align: center;
-  background-color: #333;
   > p {
     font-size: 3rem;
     padding: 0.5rem;
@@ -48,5 +50,7 @@
 }
 
 #else{
+  @include boxstyle(100vw, 30vh, none);
   border: 1px solid red;
+  margin-top: 10vh;
 }

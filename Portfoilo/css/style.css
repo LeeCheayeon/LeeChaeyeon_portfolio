@@ -307,17 +307,18 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
-#esc {
+#Esc {
   width: 3vw;
   height: 3vw;
   background-color: #333;
+  margin: 1.5vw;
+  margin-left: 93vw;
 }
 
 #container {
-  width: 80vw;
-  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,10 +332,13 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100vw;
+  height: 35vh;
+  background-color: #333;
+  margin-top: 14vh;
   border: 1px solid green;
   letter-spacing: 0.1rem;
   text-align: center;
-  background-color: #333;
 }
 
 #container > p {
@@ -364,42 +368,6 @@ html {
           animation: blink-caret 1s infinite;
 }
 
-@-webkit-keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
-}
-
-@keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
-}
-
 @-webkit-keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -419,7 +387,11 @@ html {
 }
 
 #else {
+  width: 100vw;
+  height: 30vh;
+  background-color: none;
   border: 1px solid red;
+  margin-top: 10vh;
 }
 
 * {

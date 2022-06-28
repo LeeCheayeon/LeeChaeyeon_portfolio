@@ -1,5 +1,4 @@
 import contactTyping from "./contact.js";
-import contentsMaker from "./contents.js";
 import { buttonData,proRightButnArr, contentArr,pageData, lastPageData } from "./data.js";
 import pageMaker from "./pageMaker.js";
 import proBaseMaker from "./projectBase.js";
