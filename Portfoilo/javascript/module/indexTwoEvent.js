@@ -1,5 +1,5 @@
 import contentsMaker from "./contents.js";
-import {show, hide, fadeOut} from "./fadein.js"
+import {hide} from "./fadein.js"
 
 function inTwoEvent(target,CM1,CM2,CM3){
   console.log(target);
@@ -21,7 +21,7 @@ function inTwoEvent(target,CM1,CM2,CM3){
         console.log("fade out");
         setInterval(hide,200);
         resolve()
-      },1000)
+      },800)
     });
   })
   .then(function(data){
@@ -30,7 +30,7 @@ function inTwoEvent(target,CM1,CM2,CM3){
         console.log("fade in + contentMaker");
         target.parentNode.style.display="none";
         contentsMaker(CM1,CM2,CM3,CM1);
-      },2500)
+      },2000)
     });
   });
 }

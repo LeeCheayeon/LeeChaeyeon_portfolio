@@ -24,6 +24,10 @@ html {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.items :hover {
+  margin-bottom: 2vh;
+}
+
 .items.active {
   background: rgba(255, 255, 255, 0.3);
   cursor: grabbing;
@@ -82,7 +86,6 @@ html {
   height: 55vh;
   position: relative;
   margin: 1vw;
-  margin-top: 45vh;
 }
 
 .inline {
