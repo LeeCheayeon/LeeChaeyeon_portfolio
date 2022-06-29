@@ -5,24 +5,27 @@ html {
 }
 
 .slider {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 100vh;
 }
 
 .items {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-user-select: none;
@@ -35,9 +38,7 @@ html {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
   will-change: transform;
-  position: relative;
   background: rgba(255, 255, 255, 0.1);
-  padding-top: 45vh;
 }
 
 .items.active {
@@ -51,8 +52,9 @@ html {
 .item {
   width: 18vw;
   height: 55vh;
-  margin: 1vw;
   position: relative;
+  margin: 1vw;
+  margin-top: 45vh;
 }
 
 .inline {
@@ -72,6 +74,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item:nth-child(4n+1) > div > div {
@@ -81,11 +87,11 @@ html {
 }
 
 .item:nth-child(4n+1) > div > div:nth-child(1) {
-  font-size: 300%;
+  font-size: 160%;
 }
 
 .item:nth-child(4n+1) > div > div:nth-child(2) {
-  font-size: 150%;
+  font-size: 300%;
 }
 
 .item:nth-child(4n+2) {
@@ -99,6 +105,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item:nth-child(4n+2) > div > div {
@@ -108,11 +118,11 @@ html {
 }
 
 .item:nth-child(4n+2) > div > div:nth-child(1) {
-  font-size: 300%;
+  font-size: 160%;
 }
 
 .item:nth-child(4n+2) > div > div:nth-child(2) {
-  font-size: 150%;
+  font-size: 300%;
 }
 
 .item:nth-child(4n+3) {
@@ -126,6 +136,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item:nth-child(4n+3) > div > div {
@@ -135,11 +149,11 @@ html {
 }
 
 .item:nth-child(4n+3) > div > div:nth-child(1) {
-  font-size: 300%;
+  font-size: 160%;
 }
 
 .item:nth-child(4n+3) > div > div:nth-child(2) {
-  font-size: 150%;
+  font-size: 300%;
 }
 
 .item:nth-child(4n+4) {
@@ -153,6 +167,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item:nth-child(4n+4) > div > div {
@@ -162,10 +180,10 @@ html {
 }
 
 .item:nth-child(4n+4) > div > div:nth-child(1) {
-  font-size: 300%;
+  font-size: 160%;
 }
 
 .item:nth-child(4n+4) > div > div:nth-child(2) {
-  font-size: 150%;
+  font-size: 300%;
 }
 /*# sourceMappingURL=slider.css.map */
