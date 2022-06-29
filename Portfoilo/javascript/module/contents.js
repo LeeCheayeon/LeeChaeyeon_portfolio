@@ -2,6 +2,7 @@ import { colorArr, contentArr,contentArr_3,protextboxArr } from "./data.js";
 import { boxstyle, gridstyle, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
 import {LoopMaker, LoopContent} from "./Loopfunction.js";
+import slider from "./slider.js";
 
 function contentsMaker(parentTag,target,targetP, targetPS){
   parentTag.classList.add('slider');
@@ -46,49 +47,41 @@ function contentsMaker(parentTag,target,targetP, targetPS){
     }
   });
 
-  const slider = document.querySelector("#contents")
-let isMouseDown = false;
-let startX, scrollLeft;
+  slider();
 
-slider.addEventListener("mousedown", (e) => {
-  isMouseDown = true;
-  slider.classList.add("active");
+  target.addEventListener("mouseover", function(e){
+    const targetPar =e.target.parentNode;
+    console.dir(target.firstElementChild);
+    if(target.firstElementChild.id === "contents"){
+      if(e.target.classList.value === "inline"){
+        targetPar.style.marginBottom= `${+1}vw`;
+        targetPar.style.marginTop=`${+1}vw`;
+      }
+    }
+    target.addEventListener("mouseout", function(e){
+      const targetPar =e.target.parentNode;
+      // console.dir(target.firstElementChild);
+      console.log("leave")
+      if(target.firstElementChild.id === "contents"){
+        if(e.target.classList.value === "inline"){
+          targetPar.style.marginBottom= `${-1}vw`;
+          targetPar.style.marginTop= `${-1}vw`;
+        }
+      }
+    });
+  });
 
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-  isMouseDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mouseup", () => {
-  isMouseDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if(!isMouseDown) return;
-
-  e.preventDefault();
-  const x = e.pageX -slider.offsetLeft;
-  const walk = (x-startX) * 1;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-target.addEventListener("click", function(event){
-  targetPS.style.display = "none";
-  console.dir(event.target);
-  if(event.target.classList.value === "inline"){
-    const targetpar =event.target.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
-  }else{
-    const targetpar =event.target.parentNode.parentNode;
-    LoopMaker(targetP, targetpar, targetP, targetP,"block", target)
-  }
-});
+  target.addEventListener("click", function(e){
+    const targetPP =e.target.parentNode.parentNode;
+    const targetPar =e.target.parentNode;
+    targetPS.style.display = "none";
+    if(e.target.classList.value === "inline"){
+      console.log('inline');
+      LoopMaker(targetP, targetPar, targetP, targetP,"block", target)
+    }else{
+      LoopMaker(targetP, targetPP, targetP, targetP,"block", target)
+    }
+  });
 }
-
 
 export default contentsMaker;

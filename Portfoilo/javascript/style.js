@@ -3,6 +3,7 @@ import pageMaker from "./module/pageMaker.js";
 import indexMaker from "./module/index.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
+import inTwoEvent from "./module/indexTwoEvent.js";
 import contentsMaker from "./module/contents.js";
 
 const root= document.getElementById("root");
@@ -23,9 +24,11 @@ window.addEventListener("load", function(){
   // // 클릭시 다음 페이지(2)로 넘어감================================
   root.addEventListener("click", function(event){
     if(event.target.id === "Two"){
-      pages[0].style.display = "none";
+      // event.target.style.backgroundColor = "#ff6666";
+      inTwoEvent(event.target, pages[1], root.children[1],pages);
+      // pages[0].style.display = "none";
       // id의 값이 TWo일때 =======================================
-      contentsMaker(pages[1],root.children[1],pages,pages[1]);
+      // contentsMaker(pages[1],root.children[1],pages,pages[1]);
       // page 2의 목차 div를 눌렀을 때 ============================
       // root.children[1].addEventListener("click", function(event){
       //   console.log(event.target);

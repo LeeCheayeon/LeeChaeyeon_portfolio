@@ -2,7 +2,7 @@ import {boxstyle, displayStyle} from "./function.js";
 import crateElem from "./divMaker.js";
 
 function indexMaker(parentTag){
-  const imgname = "div.svg"
+  // const imgname = "div.svg"
   parentTag.innerHTML = `
   ${crateElem("#333", "img", "div")}
   <div id="divbox">

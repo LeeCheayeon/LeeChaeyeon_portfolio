@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="fadein">나타난다</div>
+  <div class="fadeout">사라진다</div>
+
+  <script>
+    const fadein = document.getElementsByClassName("fadein");
+    const fadeout = document.getElementsByClassName("fadeout");
+
+    fadeout.addEventListner("click", function(){
+      fadeOut(fadeout);
+    })
+
+    function fadeIn(target){
+      let level =0;
+      let inTimer = null;
+      inTimer = setInterval(function(){
+        level = fadeInAction(target,level,inTimer);
+      }, 50);
+    }
+    
+    function fadeInAction(target,level,inTimer){
+      level = level + 0.1;
+      changeOpacity(target,level);
+      if(level>1) clearInterval(inTimer);
+      return level;
+    }
+
+      function fadeOut(target){
+        let level = 1;
+        let outTimer = null;
+        outTimer = setInterval(function(){
+          level = fadeOutAction(target,level,outTimer);
+          return level;
+        }, 50);
+      }
+
+      function fadeOutAction(target,level,outTimer){
+        level = level - 0.1;
+        changeOpacity(target,level);
+        if(level<0){
+          clearInterval(outTimer);
+        }
+        return level;
+      }
+
+      function changeOpacity(target, level){
+        let obj = target;
+        obj.style.opacity = level;
+        obj.style.MozOpacity = level;
+        obj.style.khtmlOpacity = level;
+        obj.style.MsFilter = "'progid:DxImageTransform.Microsoft.Alpha(Opacity="+(level*100)+")'";
+        obj.style.filter = "alpha(opacity="+(level*100)+");";
+
+      }
+  </script>
+</body>
+</html>

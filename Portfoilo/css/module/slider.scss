@@ -5,10 +5,7 @@ html {
   background-size: cover;
 }
 
-.slider{
-  @include flex(center, flex-end, row);
-  min-height: 100vh;
-}
+
 
 .items{
   align-items: flex-end;
@@ -29,7 +26,22 @@ html {
   transform: scale(1);
 }
 
+@keyframes fadeup{
+  0%{
+    opacity: 0;
+    transform: translate3d(0,100%,0);
+  }
+  to{
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+.slider{
+  @include flex(center, flex-end, row);
+  min-height: 100vh;
+}
 .item {
+  animation: fadeup 1.5s;
   width: 18vw;
   height: 55vh;
   position:relative;

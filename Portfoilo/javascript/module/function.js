@@ -1,7 +1,6 @@
 import crateElem from "./divMaker.js";
 import pageMaker from "./pageMaker.js"
 import { pageData} from "./data.js";
-import show  from "./fadein.js";
 
 export function boxstyle(target, width, height, backColor) {
   target.style.width = width;
