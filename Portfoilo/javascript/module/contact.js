@@ -7,8 +7,15 @@ function contactTyping(target, array){
   target.children[1].innerHTML = `
   <p>
   <span class="typed-text"></span><span class="cursor"></span></p>
-  `
+  `;
 
+  target.children[2].innerHTML=`
+  <p>yeontachi@gmail.com <br> github.com/LeeCheayeon </p>
+  `;
+
+  const Esc = document.getElementById("Esc");
+  Esc.classList.add("esc");
+  Esc.innerHTML="";
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".cursor");
   const typingBox =document.querySelector("#container");

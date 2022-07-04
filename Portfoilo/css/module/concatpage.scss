@@ -2,11 +2,10 @@
 
 #Six{
   @include flex(center, center, column);
-  overflow: hidden
+  overflow: hidden;
 }
 
 #Esc{
-  @include boxstyle(3vw,3vw,#333);
   margin: 1.5vw;
   margin-left: 93vw;
 }
@@ -51,6 +50,12 @@
 
 #else{
   @include boxstyle(100vw, 30vh, none);
+  @include flex(end,center, row);
   border: 1px solid red;
   margin-top: 10vh;
+  text-align:end;
+  font-size: 100%;
+  >p{
+    margin-right: 5vw;
+  }
 }

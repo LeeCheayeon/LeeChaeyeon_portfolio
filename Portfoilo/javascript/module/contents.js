@@ -13,12 +13,11 @@ function contentsMaker(parentTag,target,targetP, targetPS){
   </div>
   `
   const content = document.getElementById("contents");
-  boxstyle(content, "100vw", "55vh", "flex");
+  boxstyle(content, "100vw", "100vh", "flex");
   displayStyle(content, "flex","center", "flexEnd", "column");
   content.classList.add("items");
   const contents = Array.from(document.querySelectorAll("#contents>div"));
   contents.forEach((value)=>{
-    //   boxstyle(value,"20vw", "40vh", colorArr[i]);
     displayStyle(value,"flex","center", "center");
     value.classList.add('item');
     value.innerHTML="";
@@ -62,7 +61,6 @@ function contentsMaker(parentTag,target,targetP, targetPS){
   });
   target.addEventListener("mouseleave", function(e){
     const targetPar =e.target.parentNode;
-    // console.dir(target.firstElementChild);
     console.log("leave")
     if(target.firstElementChild.id === "contents"){
       if(e.target.classList.value === "inline"){

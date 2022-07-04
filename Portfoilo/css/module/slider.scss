@@ -17,11 +17,11 @@ html {
   transform: scale(0.98);
   will-change: transform;
   background: rgba(255,255,255,0.1);
+
+  // border: 1px solid teal;
 }
 
-.items :hover{
-  margin-bottom: 2vh;
-}
+
 .items.active {
   background: rgba(255,255,255,0.3);
   cursor: grabbing;
@@ -43,15 +43,20 @@ html {
   @include flex(center, flex-end, row);
   min-height: 100vh;
 }
+
 .item {
   animation: fadeup 1.5s;
   width: 18vw;
   height: 55vh;
   position:relative;
   margin: 1vw;
+  margin-top: 35vh;
   // margin-top: 45vh;
 }
 
+.item:hover{
+  margin-bottom: 10vh;
+}
 
 .inline{
   width: 16vw;

@@ -12,13 +12,58 @@
   }
 }
 
+#Google, #Github{
+  border: 1px solid #333;
+  border-radius: 2vw;
+}
+
 #popUp{
   @include boxstyle(100vw, 90vh, #ff6666);
   position: absolute;
-  >div:nth-child(1){
-    @include boxstyle(3vw, 3vw,#333);
-
+  >div:nth-child(2){
+    border: 1px solid green;
+    @include flex(space-around,center,row);
+    // justify-content: space-around;
   }
+}
+
+#LB{
+  width: 1.5vw;
+  height: 1.5vw;
+  border-top: 4px solid #333;
+  border-right: 4px solid #333;
+  transform: rotate(225deg);
+}
+
+#RB{
+  width: 1.5vw;
+  height: 1.5vw;
+  border-top: 4px solid #333;
+  border-right: 4px solid #333;
+  transform: rotate(45deg);
+}
+
+.esc{
+  margin-left: 90vw;
+  margin-bottom: 3vh;
+  display: inline-block;
+  width: 3vw;
+  height: 3vw;
+}
+.esc:after,.esc:before{
+margin-left: 1.5vw;
+position: absolute;
+content:' ';
+height: 2.5vw;
+width: 3px;
+background-color: #333;
+}
+
+.esc:after{
+  transform: rotate(-45deg);
+}
+.esc:before{
+  transform: rotate(45deg);
 }
 
 #downBox{

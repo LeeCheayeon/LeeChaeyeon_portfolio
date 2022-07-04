@@ -28,6 +28,11 @@
   margin-right: 80vw;
 }
 
+#Google, #Github {
+  border: 1px solid #333;
+  border-radius: 2vw;
+}
+
 #popUp {
   width: 100vw;
   height: 90vh;
@@ -35,10 +40,65 @@
   position: absolute;
 }
 
-#popUp > div:nth-child(1) {
+#popUp > div:nth-child(2) {
+  border: 1px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#LB {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-top: 4px solid #333;
+  border-right: 4px solid #333;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+#RB {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-top: 4px solid #333;
+  border-right: 4px solid #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.esc {
+  margin-left: 90vw;
+  margin-bottom: 3vh;
+  display: inline-block;
   width: 3vw;
   height: 3vw;
+}
+
+.esc:after, .esc:before {
+  margin-left: 1.5vw;
+  position: absolute;
+  content: ' ';
+  height: 2.5vw;
+  width: 3px;
   background-color: #333;
+}
+
+.esc:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.esc:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 #downBox {
@@ -148,10 +208,6 @@ html {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.items :hover {
-  margin-bottom: 2vh;
-}
-
 .items.active {
   background: rgba(255, 255, 255, 0.3);
   cursor: grabbing;
@@ -210,6 +266,11 @@ html {
   height: 55vh;
   position: relative;
   margin: 1vw;
+  margin-top: 35vh;
+}
+
+.item:hover {
+  margin-bottom: 10vh;
 }
 
 .inline {
@@ -360,9 +421,6 @@ html {
 }
 
 #Esc {
-  width: 3vw;
-  height: 3vw;
-  background-color: #333;
   margin: 1.5vw;
   margin-left: 93vw;
 }
@@ -439,8 +497,27 @@ html {
   width: 100vw;
   height: 30vh;
   background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 1px solid red;
   margin-top: 10vh;
+  text-align: end;
+  font-size: 100%;
+}
+
+#else > p {
+  margin-right: 5vw;
 }
 
 * {
