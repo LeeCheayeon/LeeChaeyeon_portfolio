@@ -13,3 +13,5 @@ let contentArr2 = contentArr;
 let contentArr3 = contentArr;
 export const contentArr_3 = contentArr1.concat(contentArr2, contentArr3);
 console.log(contentArr_3);
+
+export const slideimgArr = ["1", "2","3","4", "5"]

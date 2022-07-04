@@ -1,6 +1,7 @@
-import { buttonData,proRightButnArr,protextboxArr,popArr, popelemArr } from "./data.js";
+import { buttonData,proRightButnArr,protextboxArr,popArr, popelemArr, slideimgArr } from "./data.js";
 import {boxstyle, displayStyle, popUpMaker } from "./function.js";
 import pageMaker from "./pageMaker.js";
+import slideimg from "./slideimg.js"
 
 function proBaseMaker(target){
   target.innerHTML = `
@@ -23,6 +24,12 @@ function proBaseMaker(target){
   </div>
   `;
 
+  const githubLink = document.getElementById("Github");
+  githubLink.innerHTML=`<div onclick="location.href='https://github.com/LeeCheayeon';" style="cousor:pointer;" ><div>`;
+  const githubDiv = githubLink.children;
+  console.log(githubDiv);
+  // boxstyle(githubDiv, "3vw", "3vw", '#333');
+
   const popelem = document.getElementById("view");
   const popEsc = document.getElementById("popEsc");
   const Esc = document.getElementById("esc");
@@ -42,6 +49,8 @@ function proBaseMaker(target){
   RB.innerHTML='';
 
   boxstyle(elem, "75vw", "75vh","#d4d4d4");
+  elem.innerHTML="";
+  slideimg(popelem,elem);
 }
 
 export default proBaseMaker;
