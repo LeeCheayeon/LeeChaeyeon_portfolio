@@ -269,10 +269,32 @@ html {
   position: relative;
   margin: 1vw;
   margin-top: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item:hover {
   margin-bottom: 10vh;
+}
+
+.itemSub {
+  -webkit-animation: fadeup 1.5s;
+          animation: fadeup 1.5s;
+  width: 18vw;
+  height: 55vh;
+  position: relative;
+  margin: 1vw;
 }
 
 .inline {
@@ -281,127 +303,17 @@ html {
   border: 2px solid #fff;
 }
 
-.item:nth-child(4n+1) {
-  background: tomato;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.item:nth-child(4n+1) > div > div {
+#Title {
   margin: 1vw;
   width: 14vw;
   color: #fff;
-}
-
-.item:nth-child(4n+1) > div > div:nth-child(1) {
   font-size: 160%;
 }
 
-.item:nth-child(4n+1) > div > div:nth-child(2) {
-  font-size: 300%;
-}
-
-.item:nth-child(4n+2) {
-  background: darkslateblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.item:nth-child(4n+2) > div > div {
+#subT {
   margin: 1vw;
   width: 14vw;
   color: #fff;
-}
-
-.item:nth-child(4n+2) > div > div:nth-child(1) {
-  font-size: 160%;
-}
-
-.item:nth-child(4n+2) > div > div:nth-child(2) {
-  font-size: 300%;
-}
-
-.item:nth-child(4n+3) {
-  background: cadetblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.item:nth-child(4n+3) > div > div {
-  margin: 1vw;
-  width: 14vw;
-  color: #fff;
-}
-
-.item:nth-child(4n+3) > div > div:nth-child(1) {
-  font-size: 160%;
-}
-
-.item:nth-child(4n+3) > div > div:nth-child(2) {
-  font-size: 300%;
-}
-
-.item:nth-child(4n+4) {
-  background: sandybrown;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.item:nth-child(4n+4) > div > div {
-  margin: 1vw;
-  width: 14vw;
-  color: #fff;
-}
-
-.item:nth-child(4n+4) > div > div:nth-child(1) {
-  font-size: 160%;
-}
-
-.item:nth-child(4n+4) > div > div:nth-child(2) {
   font-size: 300%;
 }
 

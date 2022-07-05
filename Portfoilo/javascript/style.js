@@ -4,7 +4,6 @@ import indexMaker from "./module/index.js";
 import { EscClick, indexclick, popEscClick } from "./module/function.js";
 import ViewMoreDiv from "./module/veiwmore.js";
 import inTwoEvent from "./module/indexTwoEvent.js";
-import contentsMaker from "./module/contents.js";
 
 const root= document.getElementById("root");
 

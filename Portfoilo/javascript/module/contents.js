@@ -1,7 +1,7 @@
-import { colorArr, contentArr,contentArr_3,protextboxArr } from "./data.js";
-import { boxstyle, gridstyle, displayStyle } from "./function.js";
+import {colorArr, contentArr,contentArr_3,protextboxArr } from "./data.js";
+import { boxstyle, contentPageText, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
-import {LoopMaker, LoopContent} from "./Loopfunction.js";
+import {LoopMaker} from "./Loopfunction.js";
 import slider from "./slider.js";
 
 function contentsMaker(parentTag,target,targetP, targetPS){
@@ -28,47 +28,18 @@ function contentsMaker(parentTag,target,targetP, targetPS){
     `;
 
     if(value.id === contentArr[0]){
-      let valueT = value.firstElementChild;
-      valueT.children[0].innerHTML= "Project-01";
-      valueT.children[1].innerHTML= "Pet's Life";
+      contentPageText(value,0)
     } else if(value.id === contentArr[1]){
-      let valueT = value.firstElementChild;
-      valueT.children[0].innerHTML= "Project-02";
-      valueT.children[1].innerHTML= "Pet's Life";
+      contentPageText(value,1)
     }else if(value.id === contentArr[2]){
-      let valueT = value.firstElementChild;
-      valueT.children[0].innerHTML= "Project-03";
-      valueT.children[1].innerHTML= "Pet's Life";
+      contentPageText(value,2)
     }else if(value.id === contentArr[3]){
-      let valueT = value.firstElementChild;
-      valueT.children[0].innerHTML= "Contact";
-      valueT.children[1].innerHTML= "";
+      contentPageText(value,3)
     }
   });
 
   slider();
 
-  target.addEventListener("mouseenter", function(e){
-    console.log(target);
-    const targetPar =e.target.parentNode;
-    console.dir(target.firstElementChild);
-    if(target.firstElementChild.id === "contents"){
-      if(e.target.classList.value === "inline"){
-        targetPar.style.marginBottom= `${+1}vw`;
-        targetPar.style.marginTop=`${+1}vw`;
-      }
-    }
-  });
-  target.addEventListener("mouseleave", function(e){
-    const targetPar =e.target.parentNode;
-    console.log("leave")
-    if(target.firstElementChild.id === "contents"){
-      if(e.target.classList.value === "inline"){
-        targetPar.style.marginBottom= `0vw`;
-        targetPar.style.marginTop= `0vw`;
-      }
-    }
-  });
   target.addEventListener("click", function(e){
     const targetPP =e.target.parentNode.parentNode;
     const targetPar =e.target.parentNode;

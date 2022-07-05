@@ -50,10 +50,19 @@ html {
   position:relative;
   margin: 1vw;
   margin-top: 35vh;
+  @include flex (center,center,row);
 }
 
 .item:hover{
   margin-bottom: 10vh;
+}
+
+.itemSub{
+  animation: fadeup 1.5s;
+  width: 18vw;
+  height: 55vh;
+  position:relative;
+  margin: 1vw;
 }
 
 .inline{
@@ -62,73 +71,31 @@ html {
   border: 2px solid #fff;
 }
 
-.item:nth-child(4n+1) {
-  background: tomato;
-  @include flex (center,center,row);
-  >div{
-    >div{
-      margin: 1vw;
-      width: 14vw;
-      color: #fff;
-    }
-    >div:nth-child(1){
-    font-size: 160%;
-  }
-  >div:nth-child(2){
-    font-size: 300%;
-  }
-  }
+#Title{
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+  font-size: 160%;
 }
-.item:nth-child(4n+2) { 
-  background: darkslateblue;
-  @include flex (center,center,row);
-  >div{
-    >div{
-      margin: 1vw;
-      width: 14vw;
-      color: #fff;
-    }
-    >div:nth-child(1){
-    font-size: 160%;
-  }
-  >div:nth-child(2){
-    font-size: 300%;
-  }
-  }
-}
-.item:nth-child(4n+3) { 
-  background: cadetblue;
-  @include flex (center,center,row);
-  >div{
-    >div{
-      margin: 1vw;
-      width: 14vw;
-      color: #fff;
 
-    }
-    >div:nth-child(1){
-    font-size: 160%;
-  }
-  >div:nth-child(2){
-    font-size: 300%;
-  }
-  }
+#subT{
+  margin: 1vw;
+  width: 14vw;
+  color: #fff;
+  font-size: 300%;
 }
-.item:nth-child(4n+4) { 
-  background:sandybrown;
-  @include flex (center,center,row);
-  >div{
-    >div{
-      margin: 1vw;
-      width: 14vw;
-      color: #fff;
-
-    }
-    >div:nth-child(1){
-    font-size: 160%;
-  }
-  >div:nth-child(2){
-    font-size: 300%;
-  }
-  }
-}
+// .item:nth-child(4n+1) {
+//   background: tomato;
+// }
+// .item:nth-child(4n+2) { 
+//   background: darkslateblue;
+//   @include flex (center,center,row);
+// }
+// .item:nth-child(4n+3) { 
+//   background: cadetblue;
+//   @include flex (center,center,row);
+// }
+// .item:nth-child(4n+4) { 
+//   background:sandybrown;
+//   @include flex (center,center,row);
+// }

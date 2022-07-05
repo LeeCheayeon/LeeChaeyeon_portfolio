@@ -1,6 +1,6 @@
 import crateElem from "./divMaker.js";
 import pageMaker from "./pageMaker.js"
-import { pageData} from "./data.js";
+import { colorArr, pageData, subTArr, tilteArr} from "./data.js";
 
 export function boxstyle(target, width, height, backColor) {
   target.style.width = width;
@@ -34,13 +34,6 @@ export function displayStyle(target,display,justcon,alitems,flexDirco){
   target.style.flexDirection = flexDirco;
 }
 
-export function gridstyle(target,gridTemColumns,gridTemRows,gridGap){
-  target.style.gridTemplateColumns = gridTemColumns;
-  target.style.gridTemplateRows = gridTemRows;
-  target.style.gridGap = gridGap;
-}
-// repeat(3, 200px)
-
 export function popEscClick(target){
   if(target.id === "popEsc"){
     const parent = target.parentNode.parentNode;
@@ -70,4 +63,19 @@ export function EscClick (target, displayviewDiv){
     targetEsc.style.display = "none";
     displayviewDiv[1].style.display = "flex";
   }
+}
+
+export function subProPage(target,index){
+boxstyle(target,"18vw", "55vh",colorArr[index]);
+displayStyle(target,"flex", "center","center","column");
+let valueT = target.children[0];
+valueT.children[0].innerHTML= tilteArr[index];
+valueT.children[1].innerHTML= subTArr[index];
+}
+
+export function contentPageText(target,index){
+boxstyle(target,"18vw", "55vh",colorArr[index]);
+let valueT = target.firstElementChild;
+valueT.children[0].innerHTML= tilteArr[index];
+valueT.children[1].innerHTML= subTArr[index];
 }
