@@ -8,6 +8,7 @@ html {
 
 
 .items{
+  background-color: #333;
   align-items: flex-end;
   overflow: hidden;
   flex-wrap: wrap;
@@ -17,10 +18,8 @@ html {
   transform: scale(0.98);
   will-change: transform;
   background: rgba(255,255,255,0.1);
-
-  // border: 1px solid teal;
+  border: 1px solid teal;
 }
-
 
 .items.active {
   background: rgba(255,255,255,0.3);
@@ -51,7 +50,6 @@ html {
   position:relative;
   margin: 1vw;
   margin-top: 35vh;
-  // margin-top: 45vh;
 }
 
 .item:hover{
@@ -81,7 +79,6 @@ html {
   }
   }
 }
-
 .item:nth-child(4n+2) { 
   background: darkslateblue;
   @include flex (center,center,row);

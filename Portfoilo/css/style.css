@@ -189,6 +189,7 @@ html {
 }
 
 .items {
+  background-color: #333;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -206,6 +207,7 @@ html {
           transform: scale(0.98);
   will-change: transform;
   background: rgba(255, 255, 255, 0.1);
+  border: 1px solid teal;
 }
 
 .items.active {

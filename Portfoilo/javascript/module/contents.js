@@ -69,7 +69,6 @@ function contentsMaker(parentTag,target,targetP, targetPS){
       }
     }
   });
-
   target.addEventListener("click", function(e){
     const targetPP =e.target.parentNode.parentNode;
     const targetPar =e.target.parentNode;
