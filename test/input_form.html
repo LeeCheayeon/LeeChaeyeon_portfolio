@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="name"/>
+    <!--name 대신 id를 사용해야한다. 서비스중단 -->
+  </form>
+  <form>
+    <input type="email" id="your_email"/>
+  </form>
+    <input type="submit" id="send"/>
+  </form>
+
+  <div id="root"></div>
+
+  <script>
+    const name = document.getElementById("name");
+    const email = document.getElementById("your_email");
+    const send = document.getElementById("send");
+    const result = document.getElementById('root');
+
+    console.dir(send);
+    email.addEventListener("input",function(e){
+      textvalue(e);
+      console.log("send");
+      // name.addEventListener("input",textvalue(e));
+    })
+
+    function textvalue(e){
+      result.textContent = e.target.value;
+    }
+  </script>
+</body>
+</html>
