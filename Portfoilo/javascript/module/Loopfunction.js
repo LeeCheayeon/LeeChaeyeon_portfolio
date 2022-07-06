@@ -42,5 +42,7 @@ export function conClick(target){
     subProPage(target.children[0],2);
   }else if(target.id === contentArr[3]){
     subProPage(target.children[0],3);
-  }
+  };
+
+  
   }

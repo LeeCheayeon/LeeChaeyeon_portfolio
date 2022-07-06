@@ -1,5 +1,6 @@
 import contactTyping from "./contact.js";
 import { pageData,lastPageData } from "./data.js";
+import { show } from "./fadein.js";
 import { conClick } from "./Loopfunction.js";
 import proBaseMaker from "./projectBase.js";
 
@@ -20,8 +21,20 @@ function proEvent(target){
     return new Promise(function(resolve){
       setTimeout(function(){
         console.log("스케일 인터렉션");
+        const Etarget = target.children[0];
+        console.dir(Etarget.style);
+        Etarget.animate([
+          {transform: 'translateZ(0)'},
+          {transform: 'scale(1.4)', offset:0.5},
+          {transform: 'scale(0,1.4)'}
+        ],{
+          duration:2000,
+          fill:"forwards",
+          delay:250,
+          easing:"ease-out"
+        })
         resolve()
-      },800)
+      },2000)
     });
   })
   one()
@@ -36,7 +49,7 @@ function proEvent(target){
         }else{
           proBaseMaker(target);
         }
-      },4000)
+      },5000)
     });
   });
 }

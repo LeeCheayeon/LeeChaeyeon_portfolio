@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding: 0; margin: 0;}
+
+    #root{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    
+    @keyframes box {
+      0%{
+        transform: translateZ(0);
+      }
+      50%{
+        transform: scale(1.4);
+        background-color: #f66;
+        opacity: 1;
+      }
+      80%{
+        transform: scale(0,1.4);
+        background-color: brown;
+        /* transform: translate3d(0,100%,0); */
+        opacity: 0;
+      }
+      100%{
+      }
+    }
+
+    .itemSub{
+      width: 20vw;
+      height: 40vh;
+      background-color: #333;
+      animation: box 5s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="itemSub">lrondsad</div>
+  </div>
+</body>
+</html>
