@@ -21,11 +21,12 @@
   width: 3vw;
   height: 3vw;
   background-color: none;
-  margin: 1.5vw;
+  margin: 2vw;
+  margin-top: 3vw;
 }
 
 .upButBox > div:nth-child(2) {
-  margin-right: 80vw;
+  margin-right: 78vw;
 }
 
 #Google, #Github {
@@ -336,7 +337,25 @@ html {
 
 #Esc {
   margin: 1.5vw;
-  margin-left: 93vw;
+  margin-left: 91.8vw;
+}
+
+.conImgL {
+  width: 4vw;
+  height: 4vw;
+  background-color: #c4c4c4;
+  position: fixed;
+  top: 20vh;
+  left: 17vw;
+}
+
+.conImgR {
+  width: 4vw;
+  height: 4vw;
+  background-color: #c4c4c4;
+  position: fixed;
+  top: 20vh;
+  left: 79vw;
 }
 
 #container {
@@ -354,21 +373,21 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  height: 35vh;
-  background-color: #333;
-  margin-top: 14vh;
-  border: 1px solid green;
+  height: 47vh;
+  background-color: #fff;
   letter-spacing: 0.1rem;
   text-align: center;
 }
 
 #container > p {
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden;
+  margin-top: 5vh;
+  margin-bottom: 12vh;
 }
 
 #container p span.typed-text {
@@ -379,7 +398,7 @@ html {
 #container p span.cursor {
   display: inline;
   vertical-align: middle;
-  border-right: .05em solid #ccc;
+  border-right: .05em solid #333;
   -webkit-animation: blink-caret 0.7s infinite;
           animation: blink-caret 0.7s infinite;
 }
@@ -394,7 +413,7 @@ html {
     border-color: transparent;
   }
   50% {
-    border-color: #ccc;
+    border-color: #333;
   }
 }
 
@@ -403,7 +422,7 @@ html {
     border-color: transparent;
   }
   50% {
-    border-color: #ccc;
+    border-color: #333;
   }
 }
 
@@ -424,14 +443,20 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid red;
-  margin-top: 10vh;
+  margin-bottom: 14vh;
   text-align: end;
-  font-size: 100%;
+  font-size: 120%;
+}
+
+#else > div {
+  width: 5vw;
+  height: 5vw;
+  background-color: #c4c4c4;
+  margin-right: 6vw;
 }
 
 #else > p {
-  margin-right: 5vw;
+  margin-right: 3vw;
 }
 
 * {

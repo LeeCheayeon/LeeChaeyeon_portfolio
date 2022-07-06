@@ -5,10 +5,11 @@
   @include flex(center, center, row);
   >div{
     @include boxstyle(3vw, 3vw,none);
-    margin: 1.5vw;
+    margin: 2vw;
+    margin-top: 3vw;
   }
   >div:nth-child(2){
-    margin-right: 80vw;
+    margin-right: 78vw;
   }
 }
 

@@ -34,6 +34,14 @@ export function displayStyle(target,display,justcon,alitems,flexDirco){
   target.style.flexDirection = flexDirco;
 }
 
+export function positionStyle(target,position,top,bottom,left,right){
+  target.style.position = position;
+  target.style.top =top;
+  target.style.bottom = bottom;
+  target.style.left = left;
+  target.style.right = right;
+}
+
 export function popEscClick(target){
   if(target.id === "popEsc"){
     const parent = target.parentNode.parentNode;

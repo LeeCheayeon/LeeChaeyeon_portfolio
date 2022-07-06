@@ -1,6 +1,5 @@
 import contactTyping from "./contact.js";
 import { pageData,lastPageData } from "./data.js";
-import { show } from "./fadein.js";
 import { conClick } from "./Loopfunction.js";
 import proBaseMaker from "./projectBase.js";
 
@@ -25,8 +24,8 @@ function proEvent(target){
         console.dir(Etarget.style);
         Etarget.animate([
           {transform: 'translateZ(0)'},
-          {transform: 'scale(1.4)', offset:0.5},
-          {transform: 'scale(0,1.4)'}
+          {transform: 'scale(1.3)', offset:0.5},
+          {transform: 'scale(0,1.3)'}
         ],{
           duration:2000,
           fill:"forwards",
