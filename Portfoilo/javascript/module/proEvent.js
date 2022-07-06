@@ -1,3 +1,5 @@
+import contactTyping from "./contact.js";
+import { pageData,lastPageData } from "./data.js";
 import { conClick } from "./Loopfunction.js";
 import proBaseMaker from "./projectBase.js";
 
@@ -28,7 +30,12 @@ function proEvent(target){
       setTimeout(function(){
         console.log("서브페이지 삭제 페이지 생성");
         target.innerHTMl= "";
-        proBaseMaker(target);
+        const lastpage = pageData[pageData.length-1];
+        if(target.id === lastpage){
+          contactTyping(target, lastPageData);
+        }else{
+          proBaseMaker(target);
+        }
       },4000)
     });
   });

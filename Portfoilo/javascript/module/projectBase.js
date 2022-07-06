@@ -24,15 +24,10 @@ function proBaseMaker(target){
   </div>
   `;
 
-  const githubLink = document.getElementById("Github");
-  githubLink.innerHTML=`<div onclick="location.href='https://github.com/LeeCheayeon';" style="cousor:pointer;" ><div>`;
-  const githubDiv = githubLink.children;
-  console.log(githubDiv);
-  // boxstyle(githubDiv, "3vw", "3vw", '#333');
-
-  const popelem = document.getElementById("view");
-  const popEsc = document.getElementById("popEsc");
-  const Esc = document.getElementById("esc");
+  const popelem = target.children[1].children[1]; //view
+  const popEsc = target.children[1].children[0];
+  const Esc = target.children[0].children[2];
+  console.dir(Esc);
   Esc.classList.add("esc");
   Esc.innerHTML="";
   popEsc.classList.add("esc");
@@ -42,9 +37,9 @@ function proBaseMaker(target){
   `;
   boxstyle(popelem, "90vw", "75vh","none")
 
-  const LB= document.getElementById("LB");
-  const RB= document.getElementById("RB");
-  const elem= document.getElementById("elem");
+  const LB= popelem.children[0];
+  const elem= popelem.children[1];
+  const RB= popelem.children[2];
   LB.innerHTML='';
   RB.innerHTML='';
 
