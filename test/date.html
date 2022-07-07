@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내년 1월 1일까지 날짜 계산</title>
+</head>
+<body>
+  <form>
+    <label>Today Date</label>
+    <input type="date" id="date">
+  </form>
+  <label>내년 1월1일까지 남은 날짜</label>
+  <div id="answer">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+<script>
+  const Todaydate = document.getElementById("date");
+  const send = document.getElementById("send");
+  const answer = document.getElementById("answer");
+
+  Todaydate.addEventListener("change",()=>{
+  // Todaydate.value = YYYY-MM-DD;
+    console.dir(Todaydate);
+    //계산을 하기 위해 년/월/일별로 구별
+    const TodateArr = Array.from(Todaydate.value)
+    console.log(TodateArr);
+    // 문자열 > 숫자로 변환
+    const dateY = Number(TodateArr.slice(0,4).join(""));
+    console.log(dateY);
+    const dateM = Number(TodateArr.slice(5,7).join(""));
+    console.log(dateM);
+    const dateD = Number(TodateArr.slice(8,10).join(""));
+    console.log(dateD);
+    
+    // 현재 년도의 +1 (내년 = 일년 뒤)
+    const calY = dateY + 1;
+    console.log(calY);
+    const calM = 1;
+    console.log(calM);
+    const calD = 1;
+    console.log(calD);
+    
+    //계산식 0개월 00일 남았다.
+    const answerY = dateY - calY; 
+    console.log(answerY);
+
+    const answerM = 12 - dateM; 
+    console.log(answerM);
+    
+    // 일수 계산식
+    function dayCal(target){
+      let Mday;
+      if(target <= 7){
+        if(target%2===0){
+          console.log("7보다 작거나 같지만 짝수입니다.")
+          Mday = 30;
+          console.log(Mday);
+        }else{
+          console.log("7보다 작거나 같지만 홀수입니다.")
+          Mday = 31;
+          console.log(Mday);
+        }
+      }else if(target === 2){
+        console.log('2월입니다')
+        if(target%4===0){
+          //윤달
+          Mday =29;
+        }else{
+          Mday = 28;
+        }
+      }else{
+        if(target%2===0){
+          console.log("7보다 크지만 짝수입니다.")
+          Mday = 31;
+        }else{
+          console.log("7보다 크지만 홀수입니다.")
+          Mday = 30;
+        }
+      }
+      return Mday;
+    }
+    
+    const answerD = dayCal(dateM) - dateD + calD;
+    console.log(answerD);
+
+    // answerD(해당 달에 남은 일수) + (앞으로 남은 달의 일수) = 총 일수 
+    const MArr= [1,2,3,4,5,6,7,8,9,10,11,12];
+    console.log(MArr[dateM-1]);
+    let sliceM = MArr.slice(dateM,MArr.length);
+    let Arr =[];
+    console.log(sliceM);
+    // sliceM.forEach(function(value) {
+    //   // dayCal(sliceM);
+    //   console.log(value);
+    //   Arr.push(value);
+    // });
+    for(let i=0; i<sliceM.length; i++){
+      // console.log(dayCal(sliceM[i]));
+      let MM = dayCal(sliceM[i]);
+      console.log(MM);
+    }
+    const answerDMix = 000;
+    
+    answer.children[0].textContent = `${answerM}개월 ${answerD}일 남았습니다.`
+    answer.children[1].textContent = `${answerDMix}일 남았습니다.`
+  })
+</script>
+</html>

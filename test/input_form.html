@@ -6,35 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<!--name 대신 id를 사용해야한다. 서비스중단 -->
+<!-- <body>
   <form>
-    <input type="text" id="name"/>
-    <!--name 대신 id를 사용해야한다. 서비스중단 -->
-  </form>
-  <form>
+    <input type="object" id="name"/>
     <input type="email" id="your_email"/>
-  </form>
-    <input type="submit" id="send"/>
-  </form>
+  </form> -->
+  <input type="text" id="age">
+  <input type="submit" id="send"/>
+  
 
   <div id="root"></div>
 
-  <script>
+  <!-- <script>
     const name = document.getElementById("name");
     const email = document.getElementById("your_email");
-    const send = document.getElementById("send");
     const result = document.getElementById('root');
 
-    console.dir(send);
-    email.addEventListener("input",function(e){
-      textvalue(e);
-      console.log("send");
-      // name.addEventListener("input",textvalue(e));
+    // name.addEventListener("input",textvalue(e));
+
+    let nameValue;
+    let emailValue;
+    const values = {
+      // name : `${nameValue}`,
+      name : "name : " + nameValue
+      // name : `${name.value}`,
+      // email : emailValue
+    }
+    
+    send.addEventListener("click",function(e){
+      nameValue = e.target.parentNode[0].value;
+      emailValue = e.target.parentNode[1].value
+      console.dir(e.target.parentNode[0].value);
+      console.dir(e.target.parentNode[1].value);
+      console.dir(values.name);
+      console.log(typeof nameValue); //string
+      console.log("click");
+      // alert(values);
+      // result.textContent = values.name;
+      result.textContent = nameValue;
     })
+    
+    // email.addEventListener("change",function(e){
+    //   textvalue(e);
+    //   console.log("send");
+    // })
+
+      // name.addEventListener("change",function(){
+      //   alert(values);
+      // });
 
     function textvalue(e){
       result.textContent = e.target.value;
     }
+  </script> -->
+  <script>
+    const send = document.getElementById("send");
+    const ageElem = document.getElementById('age');
+    const ageValue = ageElem.value;
+    console.log(ageElem);
+    const person = {
+      name: ["Kate", "Smith"],
+      age: ageValue,
+      // age: {ageValue},
+      gender: "female",
+      interests: ["music", "skiing"],
+    };
+    
+      
+      ageElem.addEventListener("change",()=>{
+        person.age = ageElem.value;
+        // ageElem의 값이 변하면 person.age에 ageElem.value값을 넣어줘.
+        console.log('age :' + ageValue);
+        console.log('age :' + ageElem.value);
+        console.log('age :' + person.age);
+        // console.dir(person);
+        // console.log(ageValue);
+        // console.dir(ageValue);
+        // console.dir(ageElem.value);
+      });
+      console.log(typeof ageValue);
+      console.log(typeof ageElem.value);
+      console.log(typeof person.age);
+      
+      // send.addEventListener("click",()=>{
+      //   console.log('age :' + ageValue);
+      //   console.log('age :' + ageElem.value);
+      //   console.log('age :' + person.age);
+      // });
   </script>
 </body>
 </html>

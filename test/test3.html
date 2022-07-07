@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </head>
+
+  <body>
+    <form>
+      <label>Today Date</label>
+      <input type="date" id="date">
+    </form>
+    <label>내년 1월1일까지 남은 날짜</label>
+    <div id="answer"></div>
+  </body>
+
+    <script>
+      const Todaydate = document.getElementById("date");
+      const send = document.getElementById("send");
+      const answer = document.getElementById("answer");
+
+      Todaydate.addEventListener("change",()=>{
+        // Todaydate.value = YYYY-MM-DD;
+        console.dir(Todaydate);
+        //계산을 하기 위해 년/월/일별로 구별
+        const TodateArr = Array.from(Todaydate.value)
+        console.log(TodateArr);
+        // 문자열 > 숫자로 변환
+        const dateY = Number(TodateArr.slice(0,4).join(""));
+        console.log(dateY);
+        const dateM = Number(TodateArr.slice(5,7).join(""));
+        console.log(dateM);
+        const dateD = Number(TodateArr.slice(8,10).join(""));
+        console.log(dateD);
+
+        // 현재 년도의 +1 (내년 = 일년 뒤)
+        const calY = dateY + 1;
+        console.log(calY);
+        const calM = 1;
+        console.log(calM);
+        const calD = 1;
+        console.log(calD);
+
+        //계산식
+        const answerY = dateY - calY; 
+        console.log(answerY);
+        const answerM = dateM - 12 + calM; 
+        console.log(answerM);
+        function dayCal(){
+          if(dateM <= 7){
+            if(dateM%2===0){
+              console.log("7보다 작거나 같지만 짝수입니다.")
+              dateM - 12 + cal
+            }else{
+              console.log("7보다 작거나 같지만 홀수입니다.")
+            }
+          }else if(dateM === 2){
+            console.log('2월입니다')
+          }else{
+            if(dateM%2===0){
+              console.log("7보다 크지만 짝수입니다.")
+            }else{
+              console.log("7보다 크지만 홀수입니다.")
+            }
+          }
+        }
+        const answerD = dayCal(); 
+        console.log(answerY);
+        let answerValue = "answerValue";
+        answer.textContent = `오늘은 ${Todaydate.value} 입니다.`;
+        // answer.textContent = `1월1일까지 ${answerValue}일 남았습니다.`
+      })
+
+      // const sinjung = `${}`
+    </script>
+</html>
