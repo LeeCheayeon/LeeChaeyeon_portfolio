@@ -88,23 +88,26 @@
     const answerD = dayCal(dateM) - dateD + calD;
     console.log(answerD);
 
+    // 이부분은 좀 더 배열메서드를 공부하고 해볼것
     // answerD(해당 달에 남은 일수) + (앞으로 남은 달의 일수) = 총 일수 
-    const MArr= [1,2,3,4,5,6,7,8,9,10,11,12];
-    console.log(MArr[dateM-1]);
-    let sliceM = MArr.slice(dateM,MArr.length);
-    let Arr =[];
-    console.log(sliceM);
-    // sliceM.forEach(function(value) {
-    //   // dayCal(sliceM);
-    //   console.log(value);
-    //   Arr.push(value);
-    // });
-    for(let i=0; i<sliceM.length; i++){
+    // const MArr= [1,2,3,4,5,6,7,8,9,10,11,12];
+    // console.log(MArr[dateM-1]);
+    // let sliceM = MArr.slice(dateM,MArr.length);
+    // const Arr =[];
+    // console.log(sliceM);
+    // dayCal(sliceM[0]);
+    // console.log(dayCal(sliceM[0]));
+    // 배열의 값이 각각 나와서 그 숫자를 하나의 배열로 만들어야함
+    // 그 이후에 reduce()로 각 배열의 합을 구해서 더하면 된다. 
+    // for(let i=0; i<sliceM.length; i++){
       // console.log(dayCal(sliceM[i]));
-      let MM = dayCal(sliceM[i]);
-      console.log(MM);
-    }
+      // let MM = dayCal(sliceM[i]);
+      // console.log(MM);
+      // console.log(MM.reduce(dayCal(sliceM[i])));
+    // }
+    
     const answerDMix = 000;
+    //Timestemp(); 사용해서 구하기
     
     answer.children[0].textContent = `${answerM}개월 ${answerD}일 남았습니다.`
     answer.children[1].textContent = `${answerDMix}일 남았습니다.`
