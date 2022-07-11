@@ -19,10 +19,11 @@
 }
 
 #popUp{
-  @include boxstyle(100vw, 90vh, #ff6666);
+  @include boxstyle(100vw, 90vh, rgb(233, 233, 233));
+  box-shadow: #333;
   position: absolute;
   >div:nth-child(2){
-    border: 1px solid green;
+    // border: 1px solid green;
     @include flex(space-around,center,row);
     // justify-content: space-around;
   }

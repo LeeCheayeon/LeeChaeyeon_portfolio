@@ -25,13 +25,12 @@ function contactTyping(target, array){
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".cursor");
   const typingBox =document.querySelector("#container");
-  const textArray = ["안녕하세요.", "호랑이 항아리"]
+  const textArray = ["안녕하세요.", "Thanks for reading."]
 
   const conImgL = typingBox.children[0];
   const conImgR = typingBox.children[1];
   console.log(conImgL);
   console.log(conImgR);
-  // boxstyle(imgbox, "4vw","4vw","#c4c4c4");
 
   //콘솔인식됨 =================================
   const typingDelay = 200;
@@ -43,7 +42,6 @@ function contactTyping(target, array){
 
   function type() {
     if (charIndex < textArray[textArrayIndex].length) {
-  
       if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
       typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
       charIndex++;

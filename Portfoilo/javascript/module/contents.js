@@ -1,4 +1,4 @@
-import {colorArr, contentArr,contentArr_3,protextboxArr } from "./data.js";
+import {contentArr,contentArr_3,protextboxArr } from "./data.js";
 import { boxstyle, contentPageText, displayStyle } from "./function.js";
 import pageMaker from "./pageMaker.js";
 import {LoopMaker} from "./Loopfunction.js";
