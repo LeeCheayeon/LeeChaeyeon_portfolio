@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="date"></div>
+    <div id="sinjung"></div>
+    <div id="Dday"></div>
+  </div>
+  <script>
+    const root = document.getElementById("root");
+    const date = document.getElementById("date");
+    const sinjung = document.getElementById("sinjung");
+    const Dday = document.getElementById("Dday");
+
+    const value = "2022-07-11"
+    const nowdate = new Date(value);
+    //nowdate = 현재 사용자가 설정한 기준 시간
+    date.textContent = nowdate;
+
+    // 내년 1월 1일의 값
+    const sinjungDate = new Date('2023-01-01');
+    sinjung.textContent = sinjungDate.getTime();
+    //new Date('YYYY-MM-DD')는 특정 날짜에 대한 Date 객체를 생성합니다.
+    //getTime()으로 그 시간에 대한 Timestamp를 가져올 수 있습니다.
+
+    // 현재 시간으로 부터 몇년 뒤인지 특정일자가
+    const mathValue = sinjungDate.getTime() - nowdate;
+    Dday.textContent = mathValue;
+    console.log("초" + Math.floor(mathValue/1000));
+    console.log("분" + Math.floor(mathValue/(1000*60)));
+    console.log("시간" + Math.floor(mathValue/(1000*60*60)));
+    console.log("일" + Math.floor(mathValue/(1000*60*60*24)));
+    console.log("년" + Math.floor(mathValue/(1000*60*60*24*365)));
+  </script>
+</body>
+</html>
