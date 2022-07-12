@@ -106,9 +106,18 @@
       // console.log(MM.reduce(dayCal(sliceM[i])));
     // }
     
-    const answerDMix = 000;
     //Timestemp(); 사용해서 구하기
+    const todateV = new Date(Todaydate.value);
+    console.log(todateV.getTime());
+    const sinjungV = new Date('2023-01-01');
+    console.log(sinjungV.getTime());
+    const Dtime = sinjungV.getTime() - todateV.getTime();
+    console.log(Dtime);
     
+    const ddayV = Math.floor(Dtime/(1000*60*60*24));
+    console.log(ddayV);
+    
+    const answerDMix = ddayV;
     answer.children[0].textContent = `${answerM}개월 ${answerD}일 남았습니다.`
     answer.children[1].textContent = `${answerDMix}일 남았습니다.`
   })
